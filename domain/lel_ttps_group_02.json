@@ -1,0 +1,134 @@
+[
+    {
+        "name": "Doctor",
+        "type": "Subject",
+        "notion": "Person trained in patient care.",
+        "impact": "The doctor registers the patient. The doctor assigns a patient. The doctor requests a study from the patient. The doctor views the studies of his patients. The doctor views his patients The doctor adds a patient's family history. The doctor views his profile The doctor changes his password."
+    },
+    {
+        "name": "Administrator",
+        "type": "Subject",
+        "notion": "Administrator user who manages the central laboratory.",
+        "impact": "The Administrator uploads the result of a study. The Administrator views the requested budgets. The Administrator generates the budget for a study. The Administrator views the budget payments made. The Administrator rejects payment of a budget. The Administrator confirms the payment of a budget. The Administrator views the studies awaiting shipment abroad The Administrator views the Sample set of studies sent abroad The Administrator views his profile The Administrator changes his password."
+    },
+    {
+        "name": "Laboratory",
+        "type": "Subject",
+        "notion": "User granted to an Extraction Laboratory.",
+        "impact": "The laboratory confirms the extraction. The laboratory displays a list of pending shifts. The laboratory views your profile The laboratory changes your password."
+    },
+    {
+        "name": "Transporter",
+        "type": "Subject",
+        "notion": "User who is responsible for collecting the orders and taking them to the central laboratory.",
+        "impact": "The carrier views the orders from the extraction laboratories. The carrier postpones the pickup of the order to an extraction laboratory. The carrier picks up the order from an extraction laboratory. The carrier views the route sheet of the orders to be picked up. The carrier delivers the orders to the central laboratory. The carrier views his profile. The carrier changes your password."
+    },
+    {
+        "name": "Patient",
+        "type": "Subject",
+        "notion": "Person who attends a consultation with a doctor registered in the system to undergo a DNA study.",
+        "impact": "The patient views the Budgets The patient uploads the budget payment receipt. The patient views his appointments. The patient reserves an appointment for extraction. The patient cancels the appointment. The patient views his studies. The patient views his results. The patient views his profile. The patient changes his password."
+    },
+    {
+        "name": "Study",
+        "type": "Object",
+        "notion": "A medical test that examines a patient's DNA to identify changes in their genetic material.",
+        "impact": "The Doctor generates the Study The Laboratory extracts the DNA for the study The Carrier collects the DNA from the Study The Carrier delivers the DNA from the Studies The Administrator creates a Sample Set with the studies."
+    },
+    {
+        "name": "Result",
+        "type": "Object",
+        "notion": "text indicating affirmative or negative of a study and observations.",
+        "impact": "The Administrator updates the result of a study."
+    },
+    {
+        "name": "Order",
+        "type": "Object",
+        "notion": "They are all DNA extractions from studies ready to be removed from a laboratory.",
+        "impact": "The system generates the order. The carrier picks up the order. The Carrier delivers the orders to the headquarters. The order was rescheduled for the next day."
+    },
+    {
+        "name": "Appointment",
+        "type": "Object",
+        "notion": "It is a range of 15 minutes, on a specific date and laboratory.",
+        "impact": "The Patient requests the Appointment The Patient cancels the Appointment The laboratory confirms attendance at the Appointment The system marks the expired appointments."
+    },
+    {
+        "name": "Budget",
+        "type": "Object",
+        "notion": "Certificate that includes the amount that the patient must pay, the time for which it is valid, and the genes that will be controlled in the study.",
+        "impact": "The administrator generates a budget. The administrator rejects payment of the budget. The administrator confirms the payment of the budget. The system marks expired budgets."
+    },
+    {
+        "name": "Request a Study",
+        "type": "Verb",
+        "notion": "Process by which a doctor requests a study.",
+        "impact": "The doctor requests a study due to familial suspicion, enters the pathology(s) to be evaluated, enters additional genes (optional) and requests secondary findings (optional) The Doctor requests a study due to specific suspicion, enters the patient's symptoms, enters additional genes (optional) and requests secondary findings (optional). The system registers the study."
+    },
+    {
+        "name": "Generate a Budget",
+        "type": "Verb",
+        "notion": "Creation of the Budget for a study that contains the amount to be paid by the Patient and the details of the Study.",
+        "impact": "The Administrator generates the estimate. The Patient uploads the payment receipt and sends the paid estimate. The Administrator checks the payment receipt and confirms or rejects the quote. The confirmation of the quote enables the patient to make an appointment to have the blood drawn."
+    },
+    {
+        "name": "Patient Registered",
+        "type": "State",
+        "notion": "Status indicating that a patient has been entered into the system and has access to services.",
+        "impact": "The Doctor registers a new Patient."
+    },
+    {
+        "name": "Laboratory Disabled",
+        "type": "State",
+        "notion": "State indicating that a laboratory is out of service.",
+        "impact": "The Owner disables a Lab from the Labs list. The system updates to a new status of “Disabled” The Laboratory must be able to view and attend to pending appointments that are already registered The patient cannot take an appointment in a Laboratory that has been disabled."
+    },
+    {
+        "name": "Study Requested",
+        "type": "State",
+        "notion": "Initial status of a study, when it has been requested by the doctor.",
+        "impact": "The Doctor Requests the Study for the Patient, the Study is requested."
+    },
+    {
+        "name": "Study Budgeted",
+        "type": "State",
+        "notion": "Status of the study when the Administrator generated the Quote and the patient is expected to make payment.",
+        "impact": "The Administrator generates the Study Budget and goes to “BUDGET”."
+    },
+    {
+        "name": "Study Payment Accepted",
+        "type": "State",
+        "notion": "Status of the study when the Patient is authorized to take an appointment.",
+        "impact": "The Administrator confirmed the Study Budget and it goes to the “PAYMENT ACCEPTED” status."
+    },
+    {
+        "name": "Study Awaiting International Shipment",
+        "type": "State",
+        "notion": "Status of the study when it is in the headquarters and waiting to be sent abroad.",
+        "impact": "The Carrier, after his journey, leaves the sample at the headquarters. The new status of the sample is “WAITING FOR SHIPPING ABROAD”"
+    },
+    {
+        "name": "Budget Pending",
+        "type": "State",
+        "notion": "Initial status of the budget in which the Patient must make the payment.",
+        "impact": "The Administrator generated the Study Budget and it goes to the “PENDING” status. The System notifies the patient that it is necessary to make the Budget payment."
+    },
+    {
+        "name": "Budget Canceled",
+        "type": "State",
+        "notion": "State of the budget in which it is canceled in order to make the payment.",
+        "impact": "The system verifies the Budget expiration date, as today's date is after this, the status changes to “CANCELLED”. The System notifies the patient that it is necessary to request a study again."
+    },
+    {
+        "name": "Sample Set Results Received",
+        "type": "State",
+        "notion": "State of the Sample Set in which the loading of all the Samples is completed.",
+        "impact": "The Administrator uploads the last Result of a Study and the system modifies the status of the Sample Set to “RESULTS RECEIVED”"
+    },
+    {
+        "name": "Sample Set Awaiting Results",
+        "type": "State",
+        "notion": "State of the Sample Set in which it was sent abroad for the analysis of each Sample.",
+        "impact": "The system creates a sample set with the 100 samples in order of arrival and updates the status to “Waiting for Result.”"
+    }
+]

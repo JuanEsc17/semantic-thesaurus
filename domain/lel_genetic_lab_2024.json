@@ -1,0 +1,674 @@
+[
+    {
+        "name": "Patient",
+        "type": "Subject",
+        "notion": "The patient is the user who will undergo medical studies. You are the main beneficiary of the system, since you will be able to view relevant information about your studies, shifts and budgets, in addition to managing requests related to these.",
+        "impact": "The patient will be able to view the list of registered studies associated with their profile. The patient will be able to view specific details of a study, including the current status and any available results. The patient will be able to view specific details of a study, including the current status and any available results. The patient may request appointments to carry out pending studies. The patient will be able to access the estimated or final budget for their studies. The patient will be able to consult the list of appointments associated with their studies, with dates and times. The patient will be able to view the budgets for their studies, organized by costs and additional details. The patient will be able to view the final results of studies."
+    },
+    {
+        "name": "Laboratory Administrator",
+        "type": "Subject",
+        "notion": "User whose role manages and administers the samples/studies obtained from the different laboratories User whose role manages and administers the information regarding the Sampleset.",
+        "impact": "The laboratory admin generates the payment budget for a study for subsequent analysis The laboratory admin validates the payment for a study The laboratory administrator records state changes in the life cycle of samples/studies The laboratory admin obtains information on genetic variables from the API corresponding to the pathology sent as a variable The laboratory admin manages the results of the studies obtained from the laboratory The laboratory admin generates the assembly of the sample set The Laboratory admin manages the permit before the Ministry of Health for the export of samples abroad. The admin The laboratory receives notifications/results from the external laboratory with the exome results of the samples sent. The laboratory admin records the final results of all the samples carried out in the external laboratory."
+    },
+    {
+        "name": "Referring Physician",
+        "type": "Subject",
+        "notion": "It is a doctor who will give instructions for studies to be carried out on patients. It will also be the doctor who will receive the final results of the workflow.",
+        "impact": "The doctor will receive a consultation from a patient The doctor will register the patient The doctor will register a study for the patient The doctor assigns a laboratory admin to monitor the study The doctor will view a list of his patient studies The doctor will view the status history of his studies The doctor will inform the patient of the final result."
+    },
+    {
+        "name": "Transporter",
+        "type": "Subject",
+        "notion": "User whose role is in charge of collecting the samples/studies/orders obtained from the different laboratories. Will carry out the subsequent delivery of the samples/studies/orders to the central laboratory.",
+        "impact": "The transporter will receive a list of orders/samples/studies for the day. The transporter will pick up an order/sample/study. The transporter will mark an attempted visit to the laboratory that could not attend to it. At the end of the journey, the carrier will proceed to deliver the orders/samples/studies to the central laboratory and will change their status. The carrier will receive a map with the day's route."
+    },
+    {
+        "name": "Pathology",
+        "type": "Object",
+        "notion": "A pathology represents a diagnosed disease, which is associated with the studies carried out by a patient for its identification, monitoring or treatment.",
+        "impact": "Doctors record the pathology associated with a study. Patients view the diagnosed pathologies related to their studies. The reports generated include information on the pathologies detected."
+    },
+    {
+        "name": "Report",
+        "type": "Object",
+        "notion": "Document generated as a result of a medical study that contains the interpretation, conclusions and details related to the data obtained during the study.",
+        "impact": "The laboratory generates the report with the results of the study. The doctor views the report to analyze the results. The patient accesses the report through their profile."
+    },
+    {
+        "name": "Exome report",
+        "type": "Object",
+        "notion": "Specific type of report generated after performing an exome analysis (coding part of the genome), used to identify genetic variations associated with diseases or genetic predispositions.",
+        "impact": "The laboratory processes the data from the exomic study and generates the report. The doctor receives and analyzes the report to guide the patient about genetic diagnoses or treatments. The patient can view the exome report in their profile or receive it directly from the doctor."
+    },
+    {
+        "name": "Collection Appointment",
+        "type": "Object",
+        "notion": "It is the appointment that the patient chooses to carry out the extraction of the DNA sample corresponding to a genetic study. It consists of a day, time and extraction center. The shifts are divided by day, by extraction center and into 15-minute slots from the center's opening time to its closing time. Only one patient can be treated per slot. The turn goes through states: draft, confirmed.",
+        "impact": "The patient chooses a shift from those available according to day, time and extraction center, the shift is considered draft. The appointment is no longer available for other patients. The patient or guardian attaches his or her informed consent to carry out the study and send it abroad. The patient confirms the appointment. The patient modifies the shift, choosing another day, time or center."
+    },
+    {
+        "name": "Study",
+        "type": "Object",
+        "notion": "Set of medical practices that the patient must perform in the laboratory.",
+        "impact": "The employee creates a study The employee views studies The employee edits studies The employee changes status to a study The employee uploads documentation for a study The employee associates a study with a batch The Referring Physician uploads a report for the study The study is delivered to the referring physician and patient."
+    },
+    {
+        "name": "Order",
+        "type": "Object",
+        "notion": "They are all DNA extractions from studies ready to be removed from a laboratory.",
+        "impact": "The system generates the order. The carrier picks up the order. The Carrier delivers the orders to the headquarters. The order was rescheduled for the next day."
+    },
+    {
+        "name": "Collected Orders",
+        "type": "Object",
+        "notion": "Set of orders that the carrier must deliver to the central laboratory.",
+        "impact": "The carrier views the list of orders that he picked up that day."
+    },
+    {
+        "name": "Family history",
+        "type": "Object",
+        "notion": "The patient informs that there is a history of a disease in his family and resorts to carrying out the study for prevention.",
+        "impact": "The doctor uploads the pathology that the patient provides in the “Family History” field. The doctor discharges the study for the uploaded pathology. The doctor puts the study in “Generation” status. The study is pending generation of the budget by the laboratory administrator. The patient can view the status of their study."
+    },
+    {
+        "name": "Register Patient",
+        "type": "Verb",
+        "notion": "Process by which an employee registers a patient in the system.",
+        "impact": "The patient enters personal data The employee registers the personal data of a patient in a form The system registers the patient in the system The patient is assigned to a study to be performed The patient is assigned to a doctor the patient is assigned to a laboratory administrator for monitoring in the study The patient is registered in the system and can view their studies and status."
+    },
+    {
+        "name": "Collect Laboratory Order",
+        "type": "Verb",
+        "notion": "Process by which the carrier picks up an order from a laboratory.",
+        "impact": "The transporter views the list of laboratory orders The transporter views the route of the laboratories' orders on a map The transporter marks an order on the list as picked."
+    },
+    {
+        "name": "Visit Laboratory",
+        "type": "Verb",
+        "notion": "Process by which the carrier attempts to pick up an order and is prevented for some reason.",
+        "impact": "The carrier marks an order on the list as a visit attempt."
+    },
+    {
+        "name": "Deliver Orders to Central Laboratory",
+        "type": "Verb",
+        "notion": "Process by which the carrier delivers the set of orders collected to the central laboratory.",
+        "impact": "The transporter views the list of orders collected from the laboratories The transporter delivers the collected orders and marks them as delivered to the central laboratory At the same time the status of the studies changes."
+    },
+    {
+        "name": "Informed Consent Pending Submission",
+        "type": "State",
+        "notion": "The study is waiting for informed consent to be sent to the patient.",
+        "impact": "When an employee sends informed consent to a patient, the study moves to “Awaiting signed consent”"
+    },
+    {
+        "name": "Order Collected",
+        "type": "State",
+        "notion": "The order is in the possession of the carrier for subsequent delivery.",
+        "impact": "When the carrier picks up an order, it becomes “Collected”"
+    },
+    {
+        "name": "Failed Collection Visit",
+        "type": "State",
+        "notion": "The carrier is in a specific laboratory and cannot pick up the order.",
+        "impact": "When the carrier visits a laboratory and cannot pick up the order, it becomes “Visit Attempt”"
+    },
+    {
+        "name": "Orders Delivered to Central Laboratory",
+        "type": "State",
+        "notion": "Orders picked up by the carrier are directed for delivery to the central laboratory.",
+        "impact": "When the carrier delivers the collected orders, they become “Delivered to Central” and the order studies go to “Export” Laboratory Manager."
+    },
+    {
+        "name": "Study Created",
+        "type": "State",
+        "notion": "The study was created by the doctor with information and initial diagnosis of the patient. The study is awaiting creation of a budget.",
+        "impact": "When a doctor creates a new study to perform on a patient, an initial status is assigned to the study called \"Study creation.\""
+    },
+    {
+        "name": "Study Budgeted",
+        "type": "State",
+        "notion": "The study has been budgeted and payment is pending. Allows the patient or guardian to view the quote, manage payment, and advance to \"Paid\" status.",
+        "impact": "The patient can cancel the study if they do not accept the quote. The laboratory administrator records the payment of the budget associated with the study, the latter goes to “paid” status. Automatically after expiration of the budget associated with the study, if it is not paid, it goes to “Overdue” status."
+    },
+    {
+        "name": "Study Awaiting Collection",
+        "type": "State",
+        "notion": "The budget was satisfactorily paid by the patient. The study is waiting for the patient to undergo the corresponding extraction analysis.",
+        "impact": "When the laboratory administrator receives the payment notification for the study, the study goes to \"Extraction Study\" status, enabling the patient to request an appointment at an external laboratory."
+    },
+    {
+        "name": "Study Awaiting Central Transfer",
+        "type": "State",
+        "notion": "The study is ready for transfer from an external laboratory to the central sample collection laboratory.",
+        "impact": "When the laboratory administrator receives notification from the external laboratory that the sample can be removed from the establishment, the study changes status to \"Distribution Study\", enabling the transporter to distribute it to the central laboratory."
+    },
+    {
+        "name": "Study Awaiting Export",
+        "type": "State",
+        "notion": "The study is in the central laboratory awaiting transfer to the external laboratory (Korea) for sequencing.",
+        "impact": "When the carrier dispatches the samples to the central laboratory, the study defines a new status called \"Export Study.\""
+    },
+    {
+        "name": "Study in Sequencing",
+        "type": "State",
+        "notion": "The study, formed within a sample set, is ready for shipment abroad and sequencing.",
+        "impact": "When the laboratory administrator receives notification from the Ministry of Health for the export of samples, the study changes to the new status \"Sequencing Study\""
+    },
+    {
+        "name": "Study Completed",
+        "type": "State",
+        "notion": "The result obtained from abroad arrives by email to the Adm. Lab. so that it can be loaded into the system. The system carries out an analysis process to configure the study result as positive or negative.",
+        "impact": "The Adm. Lab selects the variants that arrived via email from the results from abroad. The system validates the variants entered and analyzes whether the result is positive or negative. The system saves the result and sets the study to “FINALIZED” status."
+    },
+    {
+        "name": "Sample Set in Progress",
+        "type": "State",
+        "notion": "Represents the current state of the sampleset from its creation to its completion of loading with 100 samples to export.",
+        "impact": "When a new sampleset is created for sample export, it receives an initial status of \"In Process\""
+    },
+    {
+        "name": "Sample Set in Sequencing",
+        "type": "State",
+        "notion": "Represents the state of the sampleset when the samples are enabled to be sent abroad and genetic analysis.",
+        "impact": "When the laboratory administrator receives satisfactory notification from the ministry of health for sample export, the sampleset is assigned a new status \"Sampleset Sequencing\""
+    },
+    {
+        "name": "Sample Set Completed",
+        "type": "State",
+        "notion": "Represents the state of the sampleset, when all the results corresponding to the samples that made up that sampleset were received.",
+        "impact": "When the lab manager receives/records the latest result for a sample of a given sampleset, the sampleset receives a new status called \"Sampleset Completed.\""
+    },
+    {
+        "name": "Paid Budget",
+        "type": "State",
+        "notion": "Represents the status of the budget, when the allocated amount was \"paid\" by the patient.",
+        "impact": "When the laboratory administrator receives notification that a specific patient made the corresponding payment, the budget receives a new status called \"Budget Payment\""
+    },
+    {
+        "name": "Unpaid Budget",
+        "type": "State",
+        "notion": "Represents the initial state of the budget, when the laboratory administrator generates a new budget for a given study.",
+        "impact": "When the lab administrator creates a new budget and defines an amount to be paid, the budget is assigned an initial status \"Unpaid Budget\""
+    },
+    {
+        "name": "Doctor",
+        "type": "Subject",
+        "notion": "Person trained in patient care.",
+        "impact": "The doctor registers the patient. The doctor assigns a patient. The doctor requests a study from the patient. The doctor views the studies of his patients. The doctor views his patients The doctor adds a patient's family history. The doctor views his profile The doctor changes his password."
+    },
+    {
+        "name": "Administrator",
+        "type": "Subject",
+        "notion": "Administrator user who manages the central laboratory.",
+        "impact": "The Administrator uploads the result of a study. The Administrator views the requested budgets. The Administrator generates the budget for a study. The Administrator views the budget payments made. The Administrator rejects payment of a budget. The Administrator confirms the payment of a budget. The Administrator views the studies awaiting shipment abroad The Administrator views the Sample set of studies sent abroad The Administrator views his profile The Administrator changes his password."
+    },
+    {
+        "name": "Laboratory",
+        "type": "Subject",
+        "notion": "User granted to an Extraction Laboratory.",
+        "impact": "The laboratory confirms the extraction. The laboratory displays a list of pending shifts. The laboratory views your profile The laboratory changes your password."
+    },
+    {
+        "name": "Result",
+        "type": "Object",
+        "notion": "text indicating affirmative or negative of a study and observations.",
+        "impact": "The Administrator updates the result of a study."
+    },
+    {
+        "name": "Appointment",
+        "type": "Object",
+        "notion": "It is a range of 15 minutes, on a specific date and laboratory.",
+        "impact": "The Patient requests the Appointment The Patient cancels the Appointment The laboratory confirms attendance at the Appointment The system marks the expired appointments."
+    },
+    {
+        "name": "Budget",
+        "type": "Object",
+        "notion": "Detail of the costs associated with a genetic study and/or secondary findings. The budget can include expenses for carrying out analyzes for a particular sample and additional studies for secondary findings, fees, human resources and logistics necessary to carry out the study. Contains itemized details of each base charge, discounts and additional charges. It has an validity date, after which it is considered expired if it has not yet been paid by the patient. It requires payment so that the patient can choose an extraction appointment. Go through statuses: draft, confirmed, due, paid.",
+        "impact": "A laboratory administrator generates the budget in a draft state. With unchangeable base charges. A lab administrator can add charges and discounts, in the form of items, and edit or delete these charges. A laboratory administrator marks the budget as confirmed, stopping it from being a draft. The study patient can view the confirmed study, print it and pay for it (offline). A laboratory administrator records the payment of the confirmed quote. If the effective date is exceeded without having been paid, the system expires on the budget."
+    },
+    {
+        "name": "Request a Study",
+        "type": "Verb",
+        "notion": "A study is requested to evaluate whether a patient has a suspected pathology. It is necessary to request a study since otherwise it is not possible to know whether or not a patient has the suspected pathology.",
+        "impact": "From the patient screen, choose one and select the “request study” option or within the samples screen, select the “new sample” option. If the request was made from the patient screen, the DNI field is auto-completed with that of the selected patient, otherwise the doctor must enter it by hand. The doctor selects the type of examination to be performed. The doctor selects the suspected pathology. The doctor enters the symptoms indicated by the patient. The doctor selects additional genes to test. The doctor selects the type of suspicion, it can be specific or familiar. If the suspicion is familial, the type of relationship is also selected. The doctor asks the patient if he or she wants secondary findings to be evaluated; if the answer is affirmative, he or she selects a checkbox. The doctor presses the “save” button. If the suspicion is specific, the system validates whether the symptoms entered correspond to the cardinal symptoms of the suspected pathology; otherwise, pressing the “save” button generates an error."
+    },
+    {
+        "name": "Generate a Budget",
+        "type": "Verb",
+        "notion": "The budget is generated so that the patient can pay the costs of carrying out the study and then choose an extraction appointment to continue with the procedure. A well-prepared budget allows patients and institutions to make informed decisions about the feasibility of carrying out certain studies, facilitating the financial management of the system, ensuring that resources are used efficiently.",
+        "impact": "The laboratory manager generates a draft budget for a given study. The quote includes base charges that cannot be modified, such as the base price, which includes the cost of analyzing up to 5 genes, and if secondary findings are required to be analyzed, the cost of this. Finally, if the study covers more than 5 genes, the cost of each additional gene is included. The laboratory manager can add additional costs (description and price), which add to the total cost of the quote. The lab manager can add discounts (description and amount), which are subtracted from the subtotal. Everything is added up to a total cost. The lab administrator defines an effective date, which defaults to 30 days from the current date. The laboratory administrator confirms the budget, which is no longer a draft."
+    },
+    {
+        "name": "Patient Registered",
+        "type": "State",
+        "notion": "Status indicating that a patient has been entered into the system and has access to services.",
+        "impact": "The Doctor registers a new Patient."
+    },
+    {
+        "name": "Laboratory Disabled",
+        "type": "State",
+        "notion": "State indicating that a laboratory is out of service.",
+        "impact": "The Owner disables a Lab from the Labs list. The system updates to a new status of “Disabled” The Laboratory must be able to view and attend to pending appointments that are already registered The patient cannot take an appointment in a Laboratory that has been disabled."
+    },
+    {
+        "name": "Study Requested",
+        "type": "State",
+        "notion": "The study has been requested and a budget is pending. This state begins the study process. Allows the laboratory administrator to generate a budget.",
+        "impact": "The corresponding patient or doctor can cancel the study, moving to canceled status. The laboratory administrator generates a budget for the study, moving to budgeted status."
+    },
+    {
+        "name": "Study Payment Accepted",
+        "type": "State",
+        "notion": "Status of the study when the Patient is authorized to take an appointment.",
+        "impact": "The Administrator confirmed the Study Budget and it goes to the “PAYMENT ACCEPTED” status."
+    },
+    {
+        "name": "Study Awaiting International Shipment",
+        "type": "State",
+        "notion": "Status of the study when it is in the headquarters and waiting to be sent abroad.",
+        "impact": "The Carrier, after his journey, leaves the sample at the headquarters. The new status of the sample is “WAITING FOR SHIPPING ABROAD”"
+    },
+    {
+        "name": "Budget Pending",
+        "type": "State",
+        "notion": "Initial status of the budget in which the Patient must make the payment.",
+        "impact": "The Administrator generated the Study Budget and it goes to the “PENDING” status. The System notifies the patient that it is necessary to make the Budget payment."
+    },
+    {
+        "name": "Budget Canceled",
+        "type": "State",
+        "notion": "State of the budget in which it is canceled in order to make the payment.",
+        "impact": "The system verifies the Budget expiration date, as today's date is after this, the status changes to “CANCELLED”. The System notifies the patient that it is necessary to request a study again."
+    },
+    {
+        "name": "Sample Set Results Received",
+        "type": "State",
+        "notion": "State of the Sample Set in which the loading of all the Samples is completed.",
+        "impact": "The Administrator uploads the last Result of a Study and the system modifies the status of the Sample Set to “RESULTS RECEIVED”"
+    },
+    {
+        "name": "Sample Set Awaiting Results",
+        "type": "State",
+        "notion": "State of the Sample Set in which it was sent abroad for the analysis of each Sample.",
+        "impact": "The system creates a sample set with the 100 samples in order of arrival and updates the status to “Waiting for Result.”"
+    },
+    {
+        "name": "Treating/Referring Physician",
+        "type": "Subject",
+        "notion": "He is in charge of registering new patients, requesting studies for them and monitoring patient studies. This is the health professional who cares for patients interested in genetic studies.",
+        "impact": "The treating/referring physician registers new patients. The treating/referring physician requests studies for the patients. The treating/referring physician may cancel requested studies."
+    },
+    {
+        "name": "Ministry of Health",
+        "type": "Subject",
+        "notion": "It is the body in charge of authorizing DNA samples that will be sent abroad for analysis. Without your authorization, samples cannot be sent abroad.",
+        "impact": "The Ministry of Health receives a CSV file with all the samples that need to be authorized. The Ministry of Health authorizes the samples. The Ministry of Health sends the laboratory a PDF document confirming the authorization of the samples."
+    },
+    {
+        "name": "Legal Guardian",
+        "type": "Subject",
+        "notion": "He is the legal person responsible for an incapacitated or minor patient.",
+        "impact": "The tutor accompanies the patient to the medical consultation. The tutor accepts the budgets for the studies. The tutor pays the study budgets. The tutor requests appointments at the authorized extraction centers. The guardian downloads and signs the informed consent request to carry out studies and send the DNA samples abroad. The tutor uploads the signed informed consents. The tutor downloads the results of the studies."
+    },
+    {
+        "name": "Sample/Study",
+        "type": "Object",
+        "notion": "It contains the Biological Element (For example: blood sample, saliva, tissue, etc.) collected from the patient for genetic analysis. It is the procedure of the medical study requested by a specialist, to detect a pathology based on a patient's genes. It goes through different states. It is associated with a list of the patient's symptoms and a type of suspicion. Corresponds to a type (for example, Exome). It may contain a request for evaluation of secondary findings. It contains a result of the study, positive or negative, for the corresponding pathology, and secondary findings, if requested. The study data is private to the patient and requesting doctor. In the laboratory there is anonymized patient data and only the technical data of the samples and their results are displayed. Without the sample there is no way to establish a workflow for patients, which prevents the proper diagnosis and treatment of diseases. Sample quality and handling are crucial to obtain reliable and accurate results in studies.",
+        "impact": "A doctor requests the study to be carried out at a request from a patient, registering for the study, uploading all of their data. In case of specific suspicion, the system verifies the cardinal symptoms of the study pathology to determine if the symptoms given by the patient correspond to the pathology and thus validate the discharge from the study. The study patient can view their details, including results, budget, and appointment. This can be downloaded to PDF. Laboratory administrators view anonymized studies (without patient data), referenced by a code instead of patient data. A laboratory administrator generates a budget for the study, based on the number of genes requested to be analyzed. A lab administrator marks the study as paid. The patient chooses an extraction appointment for the study, attaching an informed consent. A lab administrator marks the study as completed and pending for pickup. A carrier picks up the study and delivers it to the headquarters. A laboratory administrator includes the study in a sample-set. A lab administrator uploads the study results."
+    },
+    {
+        "name": "Sample Set",
+        "type": "Object",
+        "notion": "It is a set of DNA samples extracted from different patients, which are grouped in batches of at least 100 samples in order to facilitate their sending abroad and to reduce international shipping costs. It is identified with a unique code. It has an authorization to go abroad for all the samples it contains. It goes through states: open, closed, authorized, sent, processed, finished. It has a tracking code for shipment abroad.",
+        "impact": "A lab administrator creates an open sample-set. They are also created automatically when a new study is received in the central laboratory, in case there is no set already available. A lab administrator can accommodate (add, remove) samples from an open sample-set. When the 100th (or later) sample of the sample-set is automatically entered, the system closes it. A lab administrator can open a closed sample-set. A lab administrator can close an open sample-set that has 100 samples or more. A laboratory administrator begins the authorization process with the Ministry of Health. If positive, the set goes to authorized status. A laboratory administrator registers the shipment of the set abroad, entering its tracking code. The set goes to shipped status. A lab administrator marks the set as processed when receiving the results from outside. A lab manager records individual results for all contained studies, after which the set is moved to a finished state."
+    },
+    {
+        "name": "Informed Consent",
+        "type": "Object",
+        "notion": "Document that informs the patient about the study that is going to be carried out and about the sending of the DNA sample abroad. Record the consent of the patient (or guardian) for their DNA sample to leave the country; it is a legal requirement to proceed with the processing of the study. Without this it cannot be done. It is necessary to be able to request an extraction appointment.",
+        "impact": "The patient or guardian downloads the consent for a paid study. The patient or guardian signs the consent and uploads it to the system in order to request an extraction appointment."
+    },
+    {
+        "name": "Study Results",
+        "type": "Object",
+        "notion": "They are the results of a genetic study. Which consist of: a Positive or Negative result of the main suspected pathology, a list of gene variants found, and if secondary findings have been analyzed, a list of findings found. It may indicate that the DNA sample analyzed was of low quality. They are communicated from the foreign laboratory to the central laboratory via e-mail. Go through states: draft, confirmed.",
+        "impact": "The laboratory administrator receives the results as PDF via e-mail, after the analysis abroad. The lab manager uploads the result details to the system. The laboratory administrator confirms the upload of the results."
+    },
+    {
+        "name": "Collect Samples",
+        "type": "Verb",
+        "notion": "Samples are generated at each extraction center. It is necessary to collect the sample to continue with your workflow/analysis/evaluation since for shipment abroad they are grouped in the central laboratory.",
+        "impact": "The carrier arrives at the extraction center and notifies its arrival. The transporter collects the samples available at the center and loads them into the vehicle, marking them as collected."
+    },
+    {
+        "name": "Release Samples",
+        "type": "Verb",
+        "notion": "The sample needs to be released to continue your workflow/analysis/evaluation.",
+        "impact": "The transporter arrives at the central laboratory. The transporter delivers the collected samples to the laboratory staff. Once the samples are delivered, the system marks them as “released”. Once released, they are assigned to an open sample-set automatically, going to the “In sample-set” state."
+    },
+    {
+        "name": "Authorize Sample Shipment",
+        "type": "Verb",
+        "notion": "It is required to authorize the departure of samples abroad for legal reasons. Without this step it would not be legally possible to send the samples for analysis to the outside laboratory. It allows us to guarantee that the shipment of samples complies with the regulatory requirements established by the Ministry of Health. Enables the next step of the logistics flow, updating the status of the sample-set to authorized. Generates an official document that documents authorized samples, providing legal and administrative support.",
+        "impact": "A CSV document is generated with all the samples corresponding to a closed sample-set. The document is sent digitally to the authorization system of the Ministry of Health. The authorization process, if successful, returns a PDF document with the authorization. This document is persisted in the system for backup. If successful, the sample-set is moved to the “Authorized” state."
+    },
+    {
+        "name": "Send Samples Abroad",
+        "type": "Verb",
+        "notion": "It allows you to complete the logistic flow of the samples, registering the exit to the external laboratory. Associate a tracking number with the shipment, facilitating tracking and traceability. Updates the status of the sample-set, reflecting that it has left the local laboratory towards its final destination.",
+        "impact": "An authorized sample-set is selected. The shipment tracking number is entered, which must be unique in the system. The sample-set goes to “Sent” status."
+    },
+    {
+        "name": "Upload Results",
+        "type": "Verb",
+        "notion": "This step is required to finish processing the studies. Allows you to upload sample results so that the patients and doctors corresponding to your request can evaluate them.",
+        "impact": "The results of a batch of samples sent abroad are received by e-mail. The sent sample-set that corresponds to the sending code is selected and marked as processed, changing its status. For each sample in the set, the individual results are loaded: variants found and secondary findings (if applicable). Data is considered draft until confirmed. You can modify the loaded data that is in draft. For each result uploaded, the upload is confirmed to end the process, prohibiting future edits. The final result (positive or negative) is calculated based on this data. A notification is sent to the corresponding patient for each confirmed result. When all the results of a sample-set are confirmed, the set goes to “finished” status."
+    },
+    {
+        "name": "Study Paid",
+        "type": "State",
+        "notion": "The study has been paid for by the patient. The patient notifies the Lab Adm. to configure the study as “PAID”.",
+        "impact": "The patient pays for the study externally to the system. The patient informs the Lab Admin via email of the payment. The Adm. Lab verifies the payment. The Lab Admin configures the study status as “PAID”"
+    },
+    {
+        "name": "Study Scheduled",
+        "type": "State",
+        "notion": "An extraction shift has been chosen and the study is pending extraction. It marks the beginning of the logistical process for sample extraction.",
+        "impact": "The patient goes to the chosen shift and the extraction is performed. The laboratory administrator must subsequently mark the study as carried out, the latter goes to “Processed” status."
+    },
+    {
+        "name": "Study Processed",
+        "type": "State",
+        "notion": "The DNA sample has been taken and is pending collection. Notify the transporter that they must collect the sample at the corresponding extraction center.",
+        "impact": "The transporter visits the corresponding extraction center and collects the study sample, which goes to “Collected” status."
+    },
+    {
+        "name": "Study Collected",
+        "type": "State",
+        "notion": "The sample has been collected and is on its way to the central laboratory. Updates logistics traceability, indicating that the sample is in transit to its destination.",
+        "impact": "The transporter leaves the sample in the central laboratory and the study goes to “Released” status."
+    },
+    {
+        "name": "Study Released",
+        "type": "State",
+        "notion": "The sample has been released at the central laboratory and is pending integration into a batch of samples (sample-set). Allows the lab administrator to include the sample in a sample-set and continue with the authorization or analysis flow.",
+        "impact": "The laboratory administrator manually places the sample in a sample-set, leaving it in the “In Sample-Set” state. The above process is also done automatically when a sample is released to the central laboratory."
+    },
+    {
+        "name": "Study in Sample-Set",
+        "type": "State",
+        "notion": "The sample is part of a batch of samples and is pending analysis and resolution. Facilitates the grouping of samples for massive analysis and efficient management.",
+        "impact": "The laboratory administrator uploads the individual results obtained for the sample from outside, the study goes to “Finished”."
+    },
+    {
+        "name": "Study Expired",
+        "type": "State",
+        "notion": "The study has been canceled due to non-payment after the budget expired. Stops the workflow, forcing the process to restart if the study is requested again.",
+        "impact": "There are no status changes, the study is considered completed."
+    },
+    {
+        "name": "Study Canceled",
+        "type": "State",
+        "notion": "The study is canceled when it is in the “STARTED” and “BUDGETED” status by the Lab Adm.",
+        "impact": "The Lab Admin presses the “CANCEL” button of the study. The system validates whether the study has the status “STARTED” or “BUDGETED”. The system configures the status of the study as “CANCELLED”."
+    },
+    {
+        "name": "Sample Set Open",
+        "type": "State",
+        "notion": "The Set has been created and is pending loading of Samples. Allows the lab administrator to add samples to the batch before closing it for analysis or authorization.",
+        "impact": "The laboratory administrator can close the sample-set, if it has at least 100 samples. The set goes to “Closed” status."
+    },
+    {
+        "name": "Sample Set Closed",
+        "type": "State",
+        "notion": "The Set has been closed and is pending authorization. Prepares the batch for authorization, ensuring that it meets the established requirements.",
+        "impact": "The lab administrator can open the sample-set to load more samples or remove some. The set goes to “Open” status. The laboratory administrator can request authorization to go outside the set, which goes to “Authorized” status."
+    },
+    {
+        "name": "Sample Set Authorized",
+        "type": "State",
+        "notion": "The Set has been authorized and is pending shipment. Allows the lab administrator to record the shipment and update the batch status.",
+        "impact": "The laboratory administrator sends the set abroad and registers a tracking code, the set goes to “Sent” status."
+    },
+    {
+        "name": "Sample Set Sent",
+        "type": "State",
+        "notion": "This status represents that the authorized set of samples has been sent to the foreign laboratory, and therefore has a shipping tracking number associated with it. The sample-set is in process abroad (shipping and analysis), after which the results of all the component samples will be available.",
+        "impact": "When the analysis results are received, the laboratory administrator marks receipt, changing the status of the sample-set to processed."
+    },
+    {
+        "name": "Sample Set Processed",
+        "type": "State",
+        "notion": "The Set has been analyzed and results are pending uploading. Allows the administrator to upload the batch results and update the status to finished. In this process, the status of all the studies that make up the finished sample-set is also advanced.",
+        "impact": "When the lab manager uploads and confirms all individual sample results in the set, the set becomes “Finished.”"
+    },
+    {
+        "name": "Low-Quality Sample",
+        "type": "State",
+        "notion": "The sample does not meet the quality standards required for analysis and must be replaced. Temporarily stops the workflow until a new sample can be collected.",
+        "impact": "There are no status changes."
+    },
+    {
+        "name": "System Administrator",
+        "type": "Subject",
+        "notion": "A privileged system user with access to all system functions and administrative capabilities.",
+        "impact": "The Admin. system creates."
+    },
+    {
+        "name": "System",
+        "type": "Subject",
+        "notion": "Software that centralizes all information about laboratory samples and studies.",
+        "impact": "The system communicates with an API to obtain information in the study start form. The system generates a budget associated with a “STARTED” study. The system generates route sheets and orders. The system changes the status of studies when a roadmap ends. The system sends the study/sample to a specific Sample Set and configures its status as “CENTRALIZED”. The system generates a new Sample Set when the available Sample Set is filled with 100 studies. The system notifies the patient of the result of their study."
+    },
+    {
+        "name": "API",
+        "type": "Subject",
+        "notion": "An external REST service that provides information about symptoms, genes, validations, and shipping documentation.",
+        "impact": "The API communicates with the system to send information about symptoms, genes, and validations for the study initiation form. The API returns the Sample Set shipping documentation in pdf format. The API returns the variants of the gene to be analyzed from the study so that the Adm. Lab can select those corresponding to the result received from abroad. The API returns the result of the study according to the variants selected by the Lab Adm."
+    },
+    {
+        "name": "Study (Sample)",
+        "type": "Object",
+        "notion": "An investigation that allows us to know details about the health status of a patient. Related to a particular genetic disease.",
+        "impact": "The physician initiates the study. The system generates a budget, which the laboratory administrator edits, confirms, or rejects. The patient pays for the study, uploads signed consent, and selects a collection appointment. After the sample is collected, the transporter takes it to the central laboratory. The system assigns the study to a Sample Set, which the laboratory administrator sends abroad for analysis."
+    },
+    {
+        "name": "Consent Document",
+        "type": "Object",
+        "notion": "A document signed by a patient giving consent for their blood to be sent abroad.",
+        "impact": "The patient uploads the consent document to the system. The Lab Adm. verifies the consent document. The Lab Adm. submits the consent documents to a legal auditor."
+    },
+    {
+        "name": "Cardinal Symptoms",
+        "type": "Object",
+        "notion": "A primary telltale manifestation for a genetic disease.",
+        "impact": "The cardinal symptom must be selected to initiate a study on a genetic disease for which it is a primary symptom."
+    },
+    {
+        "name": "Medical History",
+        "type": "Object",
+        "notion": "A document that contains medical information about a person throughout their life.",
+        "impact": "The doctor updates the patient's medical history. The doctor is the only one who can see the patient's medical history."
+    },
+    {
+        "name": "Family History",
+        "type": "Object",
+        "notion": "A person has one or more biological relatives with a certain health problem.",
+        "impact": "Family history determines whether it is a family suspicion or a specific suspicion."
+    },
+    {
+        "name": "Specific Clinical Suspicion",
+        "type": "Object",
+        "notion": "Type of patient's suspicion to carry out the study. It is a particular suspicion of the patient and/or the doctor due to the nature of the symptoms.",
+        "impact": "At the beginning of the study, the doctor configures it with “Specific suspicion”"
+    },
+    {
+        "name": "Family-History Suspicion",
+        "type": "Object",
+        "notion": "Type of patient's suspicion to carry out the study. It is a particular suspicion of the patient due to family history.",
+        "impact": "When the doctor begins the study, he configures it with “Specific suspicion.” The doctor enters the patient's relationship with the family member who had the genetic disease."
+    },
+    {
+        "name": "Gene",
+        "type": "Object",
+        "notion": "DNA sequence that constitutes the functional unit for the transmission of hereditary characteristics.",
+        "impact": "At the beginning of the study, the system must register the gene or genes to be analyzed to detect the genetic disease."
+    },
+    {
+        "name": "Genetic Variant",
+        "type": "Object",
+        "notion": "A genetic variant is a permanent change in the DNA sequence that makes up a gene.",
+        "impact": "The system consults an external API to validate whether the genetic variants obtained from abroad for a study are positive or negative for a pathology."
+    },
+    {
+        "name": "Secondary Findings",
+        "type": "Object",
+        "notion": "Genetic variants. Specific set of genes to analyze.",
+        "impact": "When starting the study, the doctor activates the “Secondary Findings” option to analyze those genes. The system, when starting the study with secondary findings, generates the budget with the amount of secondary findings."
+    },
+    {
+        "name": "Route Sheet",
+        "type": "Object",
+        "notion": "Planning in time and order of the orders that the carrier must collect from the corresponding extraction centers.",
+        "impact": "The system generates the route sheet with the corresponding orders per center every business day. The carrier at the beginning of his working day begins the journey of the route sheet."
+    },
+    {
+        "name": "Shipping Requirements Documentation",
+        "type": "Object",
+        "notion": "It is the documentation necessary to send blood samples from people abroad.",
+        "impact": "The system obtains the foreign shipping documentation for the samples from an API. The Lab Adm. presents the shipping documentation to the person in charge of shipping abroad."
+    },
+    {
+        "name": "Sample Collection",
+        "type": "Object",
+        "notion": "Process of extracting blood and then using biochemical processes to separate the DNA from the other parts of a cell and thus be able to study, analyze or manipulate it.",
+        "impact": "The Lab Adm. receives the information that the extraction corresponding to a study was carried out. The Lab Adm. configures the study as “DONE”."
+    },
+    {
+        "name": "Study Result",
+        "type": "Object",
+        "notion": "Response of the verification process of the genetic variants obtained in the foreign laboratory with the suspected pathology.",
+        "impact": "The system verifies the diagnosis. Analyzes the entered variants of the result and compares them with the pathology. The system configures the study result as positive or negative, depending on the analysis and the API response."
+    },
+    {
+        "name": "Results Report",
+        "type": "Object",
+        "notion": "Text that presents information about the result of the study. This result is obtained from a foreign laboratory.",
+        "impact": "The Lab Adm. receives the information that the results of the studies, which are variants, are now available via email. The Lab Admin loads the variants of each particular study into the system. The system verifies the diagnosis. Analyzes the entered variants of the result and compares them with the pathology. The system configures the result of the study. The Lab Admin configures the study as “FINALIZED”"
+    },
+    {
+        "name": "Collection Center",
+        "type": "Object",
+        "notion": "Place equipped for blood extractions.",
+        "impact": "The patient selects an extraction center and a date. The patient then chooses an available appointment. The Lab Adm. communicates with the extraction center to update the statuses in the system."
+    },
+    {
+        "name": "Sample Set CSV File",
+        "type": "Object",
+        "notion": "Digital file in “csv” format generated by the system once the Lab Admin. configures the Sample Set as “Sent Abroad”",
+        "impact": "The Lab Admin presses the “Send” button of the Sample Set. The system generates the .csv file with the internal id and pathology of each study related to the Sample Set. The system sends it to the API."
+    },
+    {
+        "name": "Shipping Authorization Document",
+        "type": "Object",
+        "notion": "Digital file in “pdf” format generated by the API once the system sends the Sample Set file.",
+        "impact": "The API receives the .csv file. The API returns the shipping documentation in pdf format. The Lab Admin downloads and prints the document. The Lab Admin pastes the printout into the physical Sample Set package."
+    },
+    {
+        "name": "Initiate Study",
+        "type": "Verb",
+        "notion": "Resolve a suspicion about a possible genetic disease present in the patient.",
+        "impact": "The doctor selects the patient who should perform the study. The doctor completes the study initiation form. You must enter Symptoms. Genetic disease. Pathology. Type of suspicion. If related, enter the relationship. Optional genes to analyze. Secondary findings. The system controls whether the symptoms are valid with respect to the selected genetic disease, if the type of suspicion is specific. The system registers the study configured as “STARTED” The system generates a preliminary budget associated with the study."
+    },
+    {
+        "name": "Prepare Study Budget",
+        "type": "Verb",
+        "notion": "Prepare and confirm the costs associated with a patient's genetic study.",
+        "impact": "The Lab Adm. edits the budget of a study in “STARTED” status. Specifically the base amounts, genes and secondary findings. The Lab Adm. confirms the budget. The Lab Admin configures the study status to “BUDGETED”"
+    },
+    {
+        "name": "Authorize Study",
+        "type": "Verb",
+        "notion": "Authorize by consent a study initiated for a patient.",
+        "impact": "The patient generates a signed authorization document to send their study abroad. The patient uploads the consent document to the system for a specific study. The Lab Admin verifies the correctness of the document. The Lab Admin updates the study to Authorized status."
+    },
+    {
+        "name": "Select Collection Appointment",
+        "type": "Verb",
+        "notion": "Select a date and time to perform the sample extraction.",
+        "impact": "The patient chooses the study for which they choose the appointment. The patient chooses the extraction center at which they will present for extraction. The system shows the shifts available for that extraction center. The patient chooses one of the available shifts for the extraction center. The system records the patient's shift."
+    },
+    {
+        "name": "Collect a Sample",
+        "type": "Verb",
+        "notion": "A patient's study blood is drawn and the study status is changed.",
+        "impact": "The Lab Adm. marks the sample as completed. The employee at the extraction center performs the sample. The sample made generates an order at an extraction center."
+    },
+    {
+        "name": "Collect Prepared Samples",
+        "type": "Verb",
+        "notion": "Carry out the current day's route sheet by collecting all existing orders from the collection centers to drop them off at the laboratory.",
+        "impact": "The transporter collects the samples made."
+    },
+    {
+        "name": "Send Sample Set Abroad",
+        "type": "Verb",
+        "notion": "Sending a set of samples abroad to be analyzed in foreign laboratories.",
+        "impact": "The Lab Admin selects a complete Sample Set. The Lab Admin presses the “Send” button. The system obtains the shipping document for the Sample Set. The Lab Admin downloads the document (.pdf) and prints it. The Lab Admin pastes the printout into the physical Sample Set package. The Lab Admin delivers the sample set to the shipping manager."
+    },
+    {
+        "name": "Study Initiated",
+        "type": "State",
+        "notion": "Once the referring doctor has loaded the patient, he begins his corresponding study.",
+        "impact": "The doctor starts the study. The system verifies through the API the different symptoms depending on the pathology to see if they match those that the doctor uploaded."
+    },
+    {
+        "name": "Study Authorized",
+        "type": "State",
+        "notion": "The Laboratory Manager verifies patient data to know whether or not they can be sent abroad.",
+        "impact": "The patient downloads the consent document. The patient attaches the signed document. The system sets the study status to “AUTHORIZED”."
+    },
+    {
+        "name": "Appointment Confirmed",
+        "type": "State",
+        "notion": "The patient makes an appointment for a study where the sample is not taken, choosing the day and time and giving consent.",
+        "impact": "The patient selects extraction center. The patient selects the day and time available for that center. The system validates the time availability and makes the reservation of the shift, setting the status of the study to “CONFIRMED SHIFT.”"
+    },
+    {
+        "name": "Study Sample Collected",
+        "type": "State",
+        "notion": "The extraction center has taken the sample and notifies the Laboratory Adm. so that the transporter can pick it up once the estimated quantity is met.",
+        "impact": "The Lab Adm. receives notification from the extraction center that the sample was taken. The Lab Admin configures the status of the study as “DONE”. The system generates the route sheet with the studies in the “DONE” status."
+    },
+    {
+        "name": "Centralized Study",
+        "type": "State",
+        "notion": "The carrier collects the orders and takes them to the central laboratory.",
+        "impact": "The carrier receives the waybill. The carrier begins its journey. The carrier marks all the orders on its waybill as visited and ends the journey. The system configures the status of the studies related to the orders to Centralized. The system generates a Sample Set with the centralized studies."
+    },
+    {
+        "name": "Study Sent Abroad",
+        "type": "State",
+        "notion": "When the study is centralized and assigned to a Sample Set, the Lab Adm. uploads a Sample Set file in “.csv” format with the internal id and pathology of the study to authorize sending abroad. If the validation passes, the study is configured as “SENT ABROAD”",
+        "impact": "The Lab Admin presses the “Send” button for the complete Sample Set. The system generates a Sample Set file in “.csv” format with the internal id and pathology of each study related to the Sample Set and receives shipping documentation to paste into the physical package. The system sets the status of the study to “SENT ABROAD”."
+    },
+    {
+        "name": "Health Ministry",
+        "type": "Subject",
+        "notion": "The state regulatory healthcare agency overseeing diagnostic compliance and issuing export authorization permits for international genetic testing.",
+        "impact": "The health ministry receives permit requests, audits study safety, and approves exome sample transit abroad."
+    },
+    {
+        "name": "Biological Sample",
+        "type": "Object",
+        "notion": "A specimen of blood, saliva, or tissue harvested from a patient to extract genomic DNA for sequenced analysis.",
+        "impact": "Collected by phlebotomists, refrigerated by the laboratory, and packaged into sample sets for transportation."
+    },
+    {
+        "name": "Genetic Study",
+        "type": "Object",
+        "notion": "A comprehensive molecular diagnostic investigation sequencing patient DNA to detect genetic disease variants.",
+        "impact": "Requested by treating physicians, budgeted by administrators, and processed through exome sequencing."
+    }
+]

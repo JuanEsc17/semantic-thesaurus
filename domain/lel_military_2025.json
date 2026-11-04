@@ -1,0 +1,368 @@
+[
+  {
+    "name": "Cadet",
+    "type": "Subject",
+    "notion": "An enrolled student undergoing rigorous academic instruction and military formation inside the academy under disciplinary regulations.",
+    "impact": "The cadet attends instructional lectures, adheres strictly to institutional conduct codes, participates in physical military drills, and completes formal examinations."
+  },
+  {
+    "name": "Military Cadet",
+    "type": "Subject",
+    "notion": "A uniformed student receiving leadership instruction, tactical conditioning, and academic education within the military preparatory school.",
+    "impact": "The military cadet obeys orders from senior officers, maintains dormitory cleanliness, and complies with academy disciplinary standards."
+  },
+  {
+    "name": "Military Student",
+    "type": "Subject",
+    "notion": "A student receiving comprehensive moral, physical, and academic education inside a military instructional facility.",
+    "impact": "The military student attends formation drills, takes academic tests, and observes strict hierarchy protocols."
+  },
+  {
+    "name": "Academy Student",
+    "type": "Subject",
+    "notion": "An enrolled pupil pursuing accredited military and academic qualifications under the institutional academy framework.",
+    "impact": "The academy student completes semester coursework and participates in scheduled field training exercises."
+  },
+  {
+    "name": "Aspirant",
+    "type": "Subject",
+    "notion": "An officer candidate or advanced trainee undergoing specialized military and academic evaluation to qualify for academy graduation.",
+    "impact": "The aspirant complies with leadership drills, submits to continuous evaluation, and accepts institutional corrective actions when infractions occur."
+  },
+  {
+    "name": "Concept Council",
+    "type": "Subject",
+    "notion": "An internal institutional governing board composed of academy officers and educators appointed to evaluate cadet conduct and issue disciplinary rulings.",
+    "impact": "The concept council reviews disciplinary case files, analyzes infraction severity, determines corrective sanctions, and advises the director on cadet disciplinary evolution."
+  },
+  {
+    "name": "Disciplinary Board",
+    "type": "Subject",
+    "notion": "An administrative evaluation tribunal tasked with judging violations of regulations and dictating corrective measures for cadet misconduct.",
+    "impact": "The disciplinary board investigates reported infractions, deliberates upon disciplinary penalties, and communicates formal sanction resolutions to cadets."
+  },
+  {
+    "name": "Conduct Tribunal",
+    "type": "Subject",
+    "notion": "A formal disciplinary body within the military institution responsible for reviewing ethics, institutional compliance, and behavioral appeals of students.",
+    "impact": "The conduct tribunal hears cadet appeals, evaluates evidence in disciplinary hearings, and confirms or modifies imposed punitive measures."
+  },
+  {
+    "name": "Director",
+    "type": "Subject",
+    "notion": "The highest administrative and military authority of the military academy responsible for integral management, academic supervision, and disciplinary oversight.",
+    "impact": "The director directs academy operations, approves curriculum changes, confirms major disciplinary sanctions, and oversees institutional training quality."
+  },
+  {
+    "name": "Academy Commander",
+    "type": "Subject",
+    "notion": "The supreme military commanding officer in charge of military discipline, personnel administration, and tactical instruction at the academy.",
+    "impact": "The academy commander enforces disciplinary regulations, commands official assemblies, and validates sanctions determined by disciplinary boards."
+  },
+  {
+    "name": "Responsible Officer",
+    "type": "Subject",
+    "notion": "A commissioned military officer designated to oversee troop order, inspect daily training compliance, and report behavioral infractions to the disciplinary board.",
+    "impact": "The responsible officer monitors cadet conduct, documents infractions, enforces daily routines, and supervises sanction fulfillment."
+  },
+  {
+    "name": "Duty Officer",
+    "type": "Subject",
+    "notion": "A commissioned officer on active operational duty overseeing facility discipline, personnel muster, and security checkpoints.",
+    "impact": "The duty officer supervises evening formations, inspects sentry stations, and logs disciplinary incidents occurring on base."
+  },
+  {
+    "name": "Officer of the Day",
+    "type": "Subject",
+    "notion": "A designated officer on 24-hour rotational command duty responsible for supervising internal academy security, barracks order, and muster rolls.",
+    "impact": "The officer of the day inspects night barracks, receives roll call reports, logs security incidents, and dispatches guard replacements."
+  },
+  {
+    "name": "OOD",
+    "type": "Subject",
+    "notion": "The standard military abbreviation for Officer of the Day, representing the rotational commanding officer in charge of daily security and roll calls.",
+    "impact": "Sentries and patrol guards report immediate perimeter security incidents directly to the OOD during duty shifts."
+  },
+  {
+    "name": "Military Instructor",
+    "type": "Subject",
+    "notion": "A commissioned officer or senior non-commissioned officer assigned to train cadets in field tactics, ceremonial drills, and military code adherence.",
+    "impact": "The military instructor conducts tactical field drills, assesses physical performance, and reports training infractions to the officer of the day."
+  },
+  {
+    "name": "Military Drill Instructor",
+    "type": "Subject",
+    "notion": "A seasoned tactical instructor responsible for intensive parade ground drilling, physical conditioning, and disciplinary habituation of new cadets.",
+    "impact": "The military drill instructor leads ceremonial march formations, enforces grooming standards, and assigns demerits for drill errors."
+  },
+  {
+    "name": "Military Police",
+    "type": "Subject",
+    "notion": "The law enforcement branch of the military academy tasked with maintaining order, investigating major regulations violations, and guarding secure perimeters.",
+    "impact": "Military police patrol academy perimeters, investigate security breaches, and escort accused cadets to conduct tribunal hearings."
+  },
+  {
+    "name": "MP",
+    "type": "Subject",
+    "notion": "The military acronym for Military Police, designating the armed security and law enforcement unit of the academy.",
+    "impact": "The MP detains individuals who breach military security perimeters and files incident investigative reports."
+  },
+  {
+    "name": "Non-Commissioned Officer",
+    "type": "Subject",
+    "notion": "An enlisted military leader holding sergeant or corporal ranks charged with frontline supervision and practical enforcement of cadet discipline.",
+    "impact": "The non-commissioned officer directs squad-level tactical training and conducts daily morning hygiene inspections."
+  },
+  {
+    "name": "NCO",
+    "type": "Subject",
+    "notion": "The universal military initialism for Non-Commissioned Officer, denoting an enlisted tactical squad leader.",
+    "impact": "The NCO enforces immediate compliance with orders and inspects cadet kit readiness in the field."
+  },
+  {
+    "name": "Disciplinary Measure",
+    "type": "Object",
+    "notion": "A corrective regulatory sanction applied to a cadet in consequence of an institutional misconduct infraction to reinforce military discipline.",
+    "impact": "The concept council imposes a disciplinary measure. The cadet fulfills the disciplinary measure to restore institutional standing."
+  },
+  {
+    "name": "Institutional Sanction",
+    "type": "Object",
+    "notion": "A formal disciplinary penalty authorized by academy regulations to rectify behavioral infractions and penalize misconduct.",
+    "impact": "The disciplinary committee decrees an institutional sanction. Cadets serve assigned punishments under officer supervision."
+  },
+  {
+    "name": "Sanction",
+    "type": "Object",
+    "notion": "A formal corrective penalty or punitive enforcement mandated by military regulations for cadets who violate institutional codes of conduct.",
+    "impact": "The disciplinary board issues a sanction against a cadet. The cadet serves the sanction under officer supervision."
+  },
+  {
+    "name": "Corrective Action",
+    "type": "Object",
+    "notion": "A disciplinary remedy or educational measure assigned to correct cadet behavior, promote adherence to military ethics, and prevent repeat violations.",
+    "impact": "The responsible officer applies a corrective action. The cadet executes the corrective action to fulfill regulatory requirements."
+  },
+  {
+    "name": "Study Plan",
+    "type": "Object",
+    "notion": "The formal academic and military syllabus specifying subjects, physical drills, credit units, and instructional hours required to graduate from the academy.",
+    "impact": "The director supervises the study plan. Cadets complete instructional modules dictated by the study plan to obtain formal military certification."
+  },
+  {
+    "name": "Academic Curriculum",
+    "type": "Object",
+    "notion": "The structured institutional program detailing academic courses, tactical doctrine, examination criteria, and learning outcomes of the military academy.",
+    "impact": "Academy instructors teach subjects outlined in the academic curriculum to prepare cadets for commissioning."
+  },
+  {
+    "name": "Curriculum",
+    "type": "Object",
+    "notion": "The structured academic course schedule and educational program outlining required disciplines, exams, and leadership competencies for military students.",
+    "impact": "Academy faculty execute the curriculum. Cadets attend training courses according to the curriculum guidelines."
+  },
+  {
+    "name": "Standard Operating Procedure",
+    "type": "Object",
+    "notion": "A comprehensive set of step-by-step instructions compiled by military authorities to guide personnel in performing complex tactical and administrative operations uniformly.",
+    "impact": "Officers train cadets to execute tasks according to standard operating procedure to minimize operational errors."
+  },
+  {
+    "name": "SOP",
+    "type": "Object",
+    "notion": "The standard military acronym for Standard Operating Procedure, denoting established regulatory operational guidelines.",
+    "impact": "Cadets follow the SOP during weapons maintenance, fire safety drills, and sentry changeovers."
+  },
+  {
+    "name": "Physical Training",
+    "type": "Object",
+    "notion": "The structured regimen of calisthenics, distance running, obstacle course navigation, and endurance exercises designed to build cadet physical fitness.",
+    "impact": "Cadets perform daily physical training at dawn. Instructors measure cadet stamina and endurance ratings."
+  },
+  {
+    "name": "PT",
+    "type": "Object",
+    "notion": "The common military abbreviation for Physical Training, denoting mandatory athletic and conditioning sessions.",
+    "impact": "Cadets assemble in formation wearing athletic gear to complete morning PT exercises."
+  },
+  {
+    "name": "Barracks",
+    "type": "Object",
+    "notion": "The military residential building providing living quarters, bunks, and locker storage for cadets during their institutional formation.",
+    "impact": "Cadets maintain cleanliness in the barracks. Officers inspect the barracks daily to evaluate hygiene and military order."
+  },
+  {
+    "name": "Cadet Dormitory",
+    "type": "Object",
+    "notion": "The communal living quarters and sleeping quarters designated for cadets inside the military academy campus.",
+    "impact": "Cadets rest in the cadet dormitory during designated taps and prepare their gear for morning parade."
+  },
+  {
+    "name": "Guard Duty",
+    "type": "Object",
+    "notion": "A scheduled security surveillance watch assigned to cadets to safeguard academy entry checkpoints, weapons depots, and perimeter perimeters.",
+    "impact": "The cadet reports to assigned guard duty. The officer of the day inspects guard duty sentries at regular night shifts."
+  },
+  {
+    "name": "Sentry Watch",
+    "type": "Object",
+    "notion": "An armed tactical observation post stationed at a military perimeter gate to monitor approaching vehicles and personnel.",
+    "impact": "Cadets maintain sentry watch during rotating four-hour shifts and challenge unauthorized visitors."
+  },
+  {
+    "name": "Demerit Point",
+    "type": "Object",
+    "notion": "A quantified penalty mark recorded against a cadet conduct rating for minor infractions, uniform defects, or punctuality lapses.",
+    "impact": "The responsible officer assigns a demerit point. Accumulating excessive demerit points triggers formal council review."
+  },
+  {
+    "name": "Conduct Penalty",
+    "type": "Object",
+    "notion": "An official disciplinary point reduction or recorded infraction assessment logged against an individual student behavioral standing.",
+    "impact": "The disciplinary committee registers a conduct penalty that lowers the overall graduation merit standing of the cadet."
+  },
+  {
+    "name": "Detention Order",
+    "type": "Object",
+    "notion": "A formal administrative directive confining a sanctioned cadet to academy grounds during scheduled weekend leave or recreation periods.",
+    "impact": "The director issues a detention order. The officer of the day monitors cadet compliance during weekend detention."
+  },
+  {
+    "name": "Confinement Order",
+    "type": "Object",
+    "notion": "A binding disciplinary ruling mandating the physical restriction of a penalized student to barracks quarters for a specified duration.",
+    "impact": "Officers enforce the confinement order and verify that the restricted student remains inside the barracks perimeter."
+  },
+  {
+    "name": "Disciplinary File",
+    "type": "Object",
+    "notion": "An official documented record containing all incident reports, infraction notices, council evaluations, and completed sanctions of a cadet.",
+    "impact": "The concept council analyzes the disciplinary file. Administrative clerks archive disciplinary files to track cadet behavioral evolution."
+  },
+  {
+    "name": "Conduct File",
+    "type": "Object",
+    "notion": "The cumulative personnel dossier tracking a cadet ethical standing, commendations, demerits, and disciplinary board findings.",
+    "impact": "Officers consult the conduct file to determine eligibility for promotions and leadership appointments."
+  },
+  {
+    "name": "Uniform Inspection",
+    "type": "Object",
+    "notion": "A ceremonial and regulatory inspection verifying the spotless condition, authorized insignia, and disciplined appearance of cadet uniforms.",
+    "impact": "Instructors conduct uniform inspection during morning formations. Cadets with uniform deficiencies receive immediate demerit points."
+  },
+  {
+    "name": "Uniform Review",
+    "type": "Object",
+    "notion": "A formal inspection of military garments, brass alignment, footwear shine, and ceremonial accessories worn by cadets.",
+    "impact": "Commanders carry out a uniform review prior to off-base parades and flag ceremonies."
+  },
+  {
+    "name": "Roll Call",
+    "type": "Object",
+    "notion": "The formal verbal reading of the personnel muster roster to confirm the physical presence and accountability of every assigned cadet.",
+    "impact": "The squad leader calls roll call at reveille. Cadets not present during roll call are reported as missing."
+  },
+  {
+    "name": "Muster Formation",
+    "type": "Object",
+    "notion": "An organized assembly of military personnel gathered on the parade ground for accountability verification, roll calls, and orders.",
+    "impact": "Cadets assemble into muster formation upon sounding the bugle to receive the daily operational schedule."
+  },
+  {
+    "name": "Impose Disciplinary Measure",
+    "type": "Verb",
+    "notion": "The procedural act by which competent academy authorities formalize and execute a disciplinary sanction upon a cadet for an infraction.",
+    "impact": "Step 1: The responsible officer documents the infraction. Step 2: The concept council analyzes infraction severity. Step 3: The director approves the sanction."
+  },
+  {
+    "name": "Apply Sanction",
+    "type": "Verb",
+    "notion": "The administrative enforcement of a punitive or corrective measure upon an enrolled student who violated academy disciplinary regulations.",
+    "impact": "Step 1: The disciplinary board evaluates the reported violation. Step 2: The authority determines the appropriate penalty. Step 3: The officer communicates the sanction to the cadet."
+  },
+  {
+    "name": "Supervise",
+    "type": "Verb",
+    "notion": "The continuous monitoring and authoritative oversight of cadet activities, training exercises, and academic compliance to ensure institutional standards.",
+    "impact": "Step 1: The director reviews operational routines. Step 2: The officer checks student drill performance. Step 3: The commander evaluates academy adherence to standards."
+  },
+  {
+    "name": "Oversee Training",
+    "type": "Verb",
+    "notion": "To provide high-level leadership and quality supervision over military instructional drills, field tactics, and cadet discipline.",
+    "impact": "Step 1: The commander reviews tactical drill schedules. Step 2: The officer observes training field compliance. Step 3: The supervisor issues corrective operational guidance."
+  },
+  {
+    "name": "Inspect Barracks",
+    "type": "Verb",
+    "notion": "The systematic examination of cadet living quarters and equipment lockers by officers to evaluate order, hygiene, and regulatory alignment.",
+    "impact": "Step 1: The officer enters the barracks during scheduled inspection. Step 2: The inspector reviews bunk alignment, footlockers, and hygiene. Step 3: The officer logs observed defects."
+  },
+  {
+    "name": "Review Cadet Quarters",
+    "type": "Verb",
+    "notion": "The routine administrative walk-through and physical audit of student living dormitories to enforce cleanliness and regulatory protocols.",
+    "impact": "Step 1: The duty officer enters the cadet dormitory. Step 2: The officer audits cleanliness and gear layout. Step 3: The inspector assigns penalties for violations."
+  },
+  {
+    "name": "Assign Guard Duty",
+    "type": "Verb",
+    "notion": "The formal administrative allocation of sentry posts, surveillance shifts, and gate watches to eligible cadets on the daily roster.",
+    "impact": "Step 1: The duty officer reviews the monthly guard rotation schedule. Step 2: The officer assigns specific sentry posts and shifts to cadets. Step 3: The officer issues orders to guard duty sentries."
+  },
+  {
+    "name": "Detail Sentry Watch",
+    "type": "Verb",
+    "notion": "The formal scheduling and stationing of security sentinels at designated perimeter checkpoints and academy watchtowers.",
+    "impact": "Step 1: The commander details sentry assignments for the night watch. Step 2: The duty sergeant issues ammunition and credentials. Step 3: Sentries march to perimeter posts."
+  },
+  {
+    "name": "Appeal Sanction",
+    "type": "Verb",
+    "notion": "The procedural right of a cadet to submit a formal petition requesting reconsideration of an imposed disciplinary penalty.",
+    "impact": "Step 1: The cadet drafts a formal written appeal statement with evidence. Step 2: The conduct tribunal reviews the submitted appeal. Step 3: The tribunal issues a binding final verdict."
+  },
+  {
+    "name": "Contest Disciplinary Ruling",
+    "type": "Verb",
+    "notion": "To formally challenge and request legal review of a punitive sanction rendered by an academy disciplinary authority.",
+    "impact": "Step 1: The student files a contestation brief citing procedural irregularities. Step 2: The board re-examines the infraction dossier. Step 3: The authority issues an amended ruling."
+  },
+  {
+    "name": "Sanctioned",
+    "type": "State",
+    "notion": "The disciplinary status of a cadet who has received an active regulatory penalty and is serving restricted duties until completing the assigned corrective measure.",
+    "impact": "From this state, the cadet completes assigned restrictions. Upon certified fulfillment of the penalty, the cadet transitions back to Active standing."
+  },
+  {
+    "name": "Penalized",
+    "type": "State",
+    "notion": "The condition of a military student undergoing active disciplinary restrictions or detention following an infraction ruling by the board.",
+    "impact": "From this state, the penalized student serves the designated punishment. Once the term expires without further infractions, normal privileges are restored."
+  },
+  {
+    "name": "Under Observation",
+    "type": "State",
+    "notion": "The conditional warning status wherein a cadet is subjected to close behavioral and academic surveillance prior to formal sanction imposition.",
+    "impact": "From this state, if behavior improves, the cadet returns to normal standing. If repeated misconduct occurs, the cadet transitions to Sanctioned."
+  },
+  {
+    "name": "Under Disciplinary Observation",
+    "type": "State",
+    "notion": "The probationary status of a military student requiring continuous behavioral tracking and supervision following early conduct warnings.",
+    "impact": "From this state, officers review weekly conduct ratings to decide whether to restore normal status or initiate tribunal proceedings."
+  },
+  {
+    "name": "Active",
+    "type": "State",
+    "notion": "The standard good-standing status of a cadet in full compliance with academy regulations, entitled to all instructional privileges and leave permits.",
+    "impact": "From this state, if an infraction is registered, the cadet can transition to Under Observation or directly to Sanctioned."
+  },
+  {
+    "name": "In Good Standing",
+    "type": "State",
+    "notion": "The verified regular disciplinary status of an academy student without outstanding demerit points or unresolved infractions.",
+    "impact": "From this state, the student enjoys weekend leave passes, leadership appointments, and full participation in extracurricular clubs."
+  }
+]

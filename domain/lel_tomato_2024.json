@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Aphid",
+        "type": "Subject",
+        "notion": "Small, soft-bodied insect.",
+        "impact": "It feeds on the sap of the plant, causing health problems."
+    },
+    {
+        "name": "Tomato",
+        "type": "Object",
+        "notion": "It is a reddish fruit depending on the variety once developed.",
+        "impact": "It is used to feed people after harvesting."
+    },
+    {
+        "name": "Prune",
+        "type": "Verb",
+        "notion": "Cut branches or suckers from a plant,.",
+        "impact": "It serves aesthetic or plant development purposes."
+    },
+    {
+        "name": "Developed Tomato",
+        "type": "State",
+        "notion": "Growth phase of a tomato plant.",
+        "impact": "When the fruit is reddish in color it can be ingested. It goes to this state after the maturation process. Description 02."
+    }
+]

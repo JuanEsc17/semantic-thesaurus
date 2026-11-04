@@ -1,0 +1,284 @@
+[
+    {
+        "name": "Referring Physician",
+        "type": "Subject",
+        "notion": "Health professional who cares for and evaluates patients. Determines the need to carry out studies on genetic diseases.",
+        "impact": "Doctor registers patients. Doctor begins study on genetic diseases on the patient. Doctor completes referral form (study on genetic diseases)."
+    },
+    {
+        "name": "Laboratory Administrator",
+        "type": "Subject",
+        "notion": "Central laboratory administrative worker. Responsible for the operation of patient studies in a part of their workflow.",
+        "impact": "The Lab Adm. edits the study budget. The Lab Adm. confirms the study budget. The study goes to the “BUDGETED” status. The Lab Adm. rejects the study's budget. The study goes to “CANCELLED” status. The Lab Admin sets the study status to “DONE” when the study sample is drawn. The Lab Admin consults the details of the study The Lab Admin consults the details of the Sample Set."
+    },
+    {
+        "name": "System Administrator",
+        "type": "Subject",
+        "notion": "A privileged system user with access to all system functions and administrative capabilities.",
+        "impact": "The Admin. system creates."
+    },
+    {
+        "name": "Patient",
+        "type": "Subject",
+        "notion": "Person who requires a study or has a diagnostic study for genetic diseases ordered by a referring doctor.",
+        "impact": "The patient downloads the consent document The patient makes payment for the study by setting the study status to “PAID” The patient signs the document and imports it into the system, setting the study status to “AUTHORIZED”. The patient selects the extraction center and the shift to which they must present to perform the extraction, setting the status of the study to “CONFIRMED SHIFT.” The patient can consult the details of their study. The patient can consult their study history."
+    },
+    {
+        "name": "Transporter",
+        "type": "Subject",
+        "notion": "A vehicle driver who transports study samples from collection centers to the central laboratory.",
+        "impact": "The carrier consults the daily route sheet The carrier starts the route sheet The carrier can see details of a specific order on the route sheet The carrier sets an order as completed."
+    },
+    {
+        "name": "System",
+        "type": "Subject",
+        "notion": "Software that centralizes all information about laboratory samples and studies.",
+        "impact": "The system communicates with an API to obtain information in the study start form. The system generates a budget associated with a “STARTED” study. The system generates route sheets and orders. The system changes the status of studies when a roadmap ends. The system sends the study/sample to a specific Sample Set and configures its status as “CENTRALIZED”. The system generates a new Sample Set when the available Sample Set is filled with 100 studies. The system notifies the patient of the result of their study."
+    },
+    {
+        "name": "API",
+        "type": "Subject",
+        "notion": "An external REST service that provides information about symptoms, genes, validations, and shipping documentation.",
+        "impact": "The API communicates with the system to send information about symptoms, genes, and validations for the study initiation form. The API returns the Sample Set shipping documentation in pdf format. The API returns the variants of the gene to be analyzed from the study so that the Adm. Lab can select those corresponding to the result received from abroad. The API returns the result of the study according to the variants selected by the Lab Adm."
+    },
+    {
+        "name": "Study (Sample)",
+        "type": "Object",
+        "notion": "An investigation that allows us to know details about the health status of a patient. Related to a particular genetic disease.",
+        "impact": "The physician initiates the study. The system generates a budget, which the laboratory administrator edits, confirms, or rejects. The patient pays for the study, uploads signed consent, and selects a collection appointment. After the sample is collected, the transporter takes it to the central laboratory. The system assigns the study to a Sample Set, which the laboratory administrator sends abroad for analysis."
+    },
+    {
+        "name": "Sample Set",
+        "type": "Object",
+        "notion": "Set of studies that are in “CENTRALIZED” status. There can be a maximum of 100 studies.",
+        "impact": "The carrier configures the order route as completed and then the system configures the studies for those orders as “CENTRALIZED”. The system assigns the “CENTRALIZED” studies to an available Sample Set. The system generates a new Sample Set when the available Sample Set is filled with 100 studies. The Lab Admin can configure the Sample Set to send it abroad."
+    },
+    {
+        "name": "Consent Document",
+        "type": "Object",
+        "notion": "A document signed by a patient giving consent for their blood to be sent abroad.",
+        "impact": "The patient uploads the consent document to the system. The Lab Adm. verifies the consent document. The Lab Adm. submits the consent documents to a legal auditor."
+    },
+    {
+        "name": "Cardinal Symptoms",
+        "type": "Object",
+        "notion": "A primary telltale manifestation for a genetic disease.",
+        "impact": "The cardinal symptom must be selected to initiate a study on a genetic disease for which it is a primary symptom."
+    },
+    {
+        "name": "Budget",
+        "type": "Object",
+        "notion": "A document related to a study that contains the amount that the patient must pay to carry out the corresponding study. The total amount is made up of three amounts: The base amount depends on the type of study chosen. The amount of optional genes to analyze (unit price of the gene for the number of genes chosen). The amount of secondary findings is optional.",
+        "impact": "The system generates the base budget when a study is started. The Lab Admin edits the budget. The adm. lab. confirm the budget. The study is set to the “Budgeted” status."
+    },
+    {
+        "name": "Medical History",
+        "type": "Object",
+        "notion": "A document that contains medical information about a person throughout their life.",
+        "impact": "The doctor updates the patient's medical history. The doctor is the only one who can see the patient's medical history."
+    },
+    {
+        "name": "Family History",
+        "type": "Object",
+        "notion": "A person has one or more biological relatives with a certain health problem.",
+        "impact": "Family history determines whether it is a family suspicion or a specific suspicion."
+    },
+    {
+        "name": "Specific Clinical Suspicion",
+        "type": "Object",
+        "notion": "Type of patient's suspicion to carry out the study. It is a particular suspicion of the patient and/or the doctor due to the nature of the symptoms.",
+        "impact": "At the beginning of the study, the doctor configures it with “Specific suspicion”"
+    },
+    {
+        "name": "Family-History Suspicion",
+        "type": "Object",
+        "notion": "Type of patient's suspicion to carry out the study. It is a particular suspicion of the patient due to family history.",
+        "impact": "When the doctor begins the study, he configures it with “Specific suspicion.” The doctor enters the patient's relationship with the family member who had the genetic disease."
+    },
+    {
+        "name": "Pathology",
+        "type": "Object",
+        "notion": "Disease that is caused by alterations in genes.",
+        "impact": "At the beginning of the study, the doctor selects the suspected pathology. The system looks for the gene related to that pathology."
+    },
+    {
+        "name": "Gene",
+        "type": "Object",
+        "notion": "DNA sequence that constitutes the functional unit for the transmission of hereditary characteristics.",
+        "impact": "At the beginning of the study, the system must register the gene or genes to be analyzed to detect the genetic disease."
+    },
+    {
+        "name": "Genetic Variant",
+        "type": "Object",
+        "notion": "A genetic variant is a permanent change in the DNA sequence that makes up a gene.",
+        "impact": "The system consults an external API to validate whether the genetic variants obtained from abroad for a study are positive or negative for a pathology."
+    },
+    {
+        "name": "Secondary Findings",
+        "type": "Object",
+        "notion": "Genetic variants. Specific set of genes to analyze.",
+        "impact": "When starting the study, the doctor activates the “Secondary Findings” option to analyze those genes. The system, when starting the study with secondary findings, generates the budget with the amount of secondary findings."
+    },
+    {
+        "name": "Route Sheet",
+        "type": "Object",
+        "notion": "Planning in time and order of the orders that the carrier must collect from the corresponding extraction centers.",
+        "impact": "The system generates the route sheet with the corresponding orders per center every business day. The carrier at the beginning of his working day begins the journey of the route sheet."
+    },
+    {
+        "name": "Order",
+        "type": "Object",
+        "notion": "Set of samples linked to a specific extraction center. Studies linked to orders must be in “Sample Taken” status.",
+        "impact": "The system generates the corresponding orders per center with their samples. The system assigns the orders to the next day's routing."
+    },
+    {
+        "name": "Shipping Requirements Documentation",
+        "type": "Object",
+        "notion": "It is the documentation necessary to send blood samples from people abroad.",
+        "impact": "The system obtains the foreign shipping documentation for the samples from an API. The Lab Adm. presents the shipping documentation to the person in charge of shipping abroad."
+    },
+    {
+        "name": "Sample Collection",
+        "type": "Object",
+        "notion": "Process of extracting blood and then using biochemical processes to separate the DNA from the other parts of a cell and thus be able to study, analyze or manipulate it.",
+        "impact": "The Lab Adm. receives the information that the extraction corresponding to a study was carried out. The Lab Adm. configures the study as “DONE”."
+    },
+    {
+        "name": "Study Result",
+        "type": "Object",
+        "notion": "Response of the verification process of the genetic variants obtained in the foreign laboratory with the suspected pathology.",
+        "impact": "The system verifies the diagnosis. Analyzes the entered variants of the result and compares them with the pathology. The system configures the study result as positive or negative, depending on the analysis and the API response."
+    },
+    {
+        "name": "Results Report",
+        "type": "Object",
+        "notion": "Text that presents information about the result of the study. This result is obtained from a foreign laboratory.",
+        "impact": "The Lab Adm. receives the information that the results of the studies, which are variants, are now available via email. The Lab Admin loads the variants of each particular study into the system. The system verifies the diagnosis. Analyzes the entered variants of the result and compares them with the pathology. The system configures the result of the study. The Lab Admin configures the study as “FINALIZED”"
+    },
+    {
+        "name": "Appointment",
+        "type": "Object",
+        "notion": "Reservation of a time range at a specific time and date for gene extraction in an extraction center.",
+        "impact": "The patient selects an extraction center and a date. The patient then chooses an available appointment."
+    },
+    {
+        "name": "Collection Center",
+        "type": "Object",
+        "notion": "Place equipped for blood extractions.",
+        "impact": "The patient selects an extraction center and a date. The patient then chooses an available appointment. The Lab Adm. communicates with the extraction center to update the statuses in the system."
+    },
+    {
+        "name": "Sample Set CSV File",
+        "type": "Object",
+        "notion": "Digital file in “csv” format generated by the system once the Lab Admin. configures the Sample Set as “Sent Abroad”",
+        "impact": "The Lab Admin presses the “Send” button of the Sample Set. The system generates the .csv file with the internal id and pathology of each study related to the Sample Set. The system sends it to the API."
+    },
+    {
+        "name": "Shipping Authorization Document",
+        "type": "Object",
+        "notion": "Digital file in “pdf” format generated by the API once the system sends the Sample Set file.",
+        "impact": "The API receives the .csv file. The API returns the shipping documentation in pdf format. The Lab Admin downloads and prints the document. The Lab Admin pastes the printout into the physical Sample Set package."
+    },
+    {
+        "name": "Initiate Study",
+        "type": "Verb",
+        "notion": "Resolve a suspicion about a possible genetic disease present in the patient.",
+        "impact": "The doctor selects the patient who should perform the study. The doctor completes the study initiation form. You must enter Symptoms. Genetic disease. Pathology. Type of suspicion. If related, enter the relationship. Optional genes to analyze. Secondary findings. The system controls whether the symptoms are valid with respect to the selected genetic disease, if the type of suspicion is specific. The system registers the study configured as “STARTED” The system generates a preliminary budget associated with the study."
+    },
+    {
+        "name": "Prepare Study Budget",
+        "type": "Verb",
+        "notion": "Prepare and confirm the costs associated with a patient's genetic study.",
+        "impact": "The Lab Adm. edits the budget of a study in “STARTED” status. Specifically the base amounts, genes and secondary findings. The Lab Adm. confirms the budget. The Lab Admin configures the study status to “BUDGETED”"
+    },
+    {
+        "name": "Authorize Study",
+        "type": "Verb",
+        "notion": "Authorize by consent a study initiated for a patient.",
+        "impact": "The patient generates a signed authorization document to send their study abroad. The patient uploads the consent document to the system for a specific study. The Lab Admin verifies the correctness of the document. The Lab Admin updates the study to Authorized status."
+    },
+    {
+        "name": "Select Collection Appointment",
+        "type": "Verb",
+        "notion": "Select a date and time to perform the sample extraction.",
+        "impact": "The patient chooses the study for which they choose the appointment. The patient chooses the extraction center at which they will present for extraction. The system shows the shifts available for that extraction center. The patient chooses one of the available shifts for the extraction center. The system records the patient's shift."
+    },
+    {
+        "name": "Collect a Sample",
+        "type": "Verb",
+        "notion": "A patient's study blood is drawn and the study status is changed.",
+        "impact": "The Lab Adm. marks the sample as completed. The employee at the extraction center performs the sample. The sample made generates an order at an extraction center."
+    },
+    {
+        "name": "Collect Prepared Samples",
+        "type": "Verb",
+        "notion": "Carry out the current day's route sheet by collecting all existing orders from the collection centers to drop them off at the laboratory.",
+        "impact": "The transporter collects the samples made."
+    },
+    {
+        "name": "Send Sample Set Abroad",
+        "type": "Verb",
+        "notion": "Sending a set of samples abroad to be analyzed in foreign laboratories.",
+        "impact": "The Lab Admin selects a complete Sample Set. The Lab Admin presses the “Send” button. The system obtains the shipping document for the Sample Set. The Lab Admin downloads the document (.pdf) and prints it. The Lab Admin pastes the printout into the physical Sample Set package. The Lab Admin delivers the sample set to the shipping manager."
+    },
+    {
+        "name": "Study Initiated",
+        "type": "State",
+        "notion": "Once the referring doctor has loaded the patient, he begins his corresponding study.",
+        "impact": "The doctor starts the study. The system verifies through the API the different symptoms depending on the pathology to see if they match those that the doctor uploaded."
+    },
+    {
+        "name": "Study Budgeted",
+        "type": "State",
+        "notion": "The study has been budgeted by the system and this budget was edited and/or confirmed by the Adm. Lab.",
+        "impact": "The system notifies the patient when the study is budgeted. The patient can pay for the study."
+    },
+    {
+        "name": "Study Paid",
+        "type": "State",
+        "notion": "The study has been paid for by the patient. The patient notifies the Lab Adm. to configure the study as “PAID”.",
+        "impact": "The patient pays for the study externally to the system. The patient informs the Lab Admin via email of the payment. The Adm. Lab verifies the payment. The Lab Admin configures the study status as “PAID”"
+    },
+    {
+        "name": "Study Authorized",
+        "type": "State",
+        "notion": "The Laboratory Manager verifies patient data to know whether or not they can be sent abroad.",
+        "impact": "The patient downloads the consent document. The patient attaches the signed document. The system sets the study status to “AUTHORIZED”."
+    },
+    {
+        "name": "Appointment Confirmed",
+        "type": "State",
+        "notion": "The patient makes an appointment for a study where the sample is not taken, choosing the day and time and giving consent.",
+        "impact": "The patient selects extraction center. The patient selects the day and time available for that center. The system validates the time availability and makes the reservation of the shift, setting the status of the study to “CONFIRMED SHIFT.”"
+    },
+    {
+        "name": "Study Sample Collected",
+        "type": "State",
+        "notion": "The extraction center has taken the sample and notifies the Laboratory Adm. so that the transporter can pick it up once the estimated quantity is met.",
+        "impact": "The Lab Adm. receives notification from the extraction center that the sample was taken. The Lab Admin configures the status of the study as “DONE”. The system generates the route sheet with the studies in the “DONE” status."
+    },
+    {
+        "name": "Centralized Study",
+        "type": "State",
+        "notion": "The carrier collects the orders and takes them to the central laboratory.",
+        "impact": "The carrier receives the waybill. The carrier begins its journey. The carrier marks all the orders on its waybill as visited and ends the journey. The system configures the status of the studies related to the orders to Centralized. The system generates a Sample Set with the centralized studies."
+    },
+    {
+        "name": "Study Sent Abroad",
+        "type": "State",
+        "notion": "When the study is centralized and assigned to a Sample Set, the Lab Adm. uploads a Sample Set file in “.csv” format with the internal id and pathology of the study to authorize sending abroad. If the validation passes, the study is configured as “SENT ABROAD”",
+        "impact": "The Lab Admin presses the “Send” button for the complete Sample Set. The system generates a Sample Set file in “.csv” format with the internal id and pathology of each study related to the Sample Set and receives shipping documentation to paste into the physical package. The system sets the status of the study to “SENT ABROAD”."
+    },
+    {
+        "name": "Study Completed",
+        "type": "State",
+        "notion": "The result obtained from abroad arrives by email to the Adm. Lab. so that it can be loaded into the system. The system carries out an analysis process to configure the study result as positive or negative.",
+        "impact": "The Adm. Lab selects the variants that arrived via email from the results from abroad. The system validates the variants entered and analyzes whether the result is positive or negative. The system saves the result and sets the study to “FINALIZED” status."
+    },
+    {
+        "name": "Study Canceled",
+        "type": "State",
+        "notion": "The study is canceled when it is in the “STARTED” and “BUDGETED” status by the Lab Adm.",
+        "impact": "The Lab Admin presses the “CANCEL” button of the study. The system validates whether the study has the status “STARTED” or “BUDGETED”. The system configures the status of the study as “CANCELLED”."
+    }
+]

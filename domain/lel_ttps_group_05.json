@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Doctor",
+        "type": "Subject",
+        "notion": "System user in charge of registering patients and requesting genetic studies for the diagnosis of rare diseases.",
+        "impact": "The doctor registers patients, views and updates their information, and orders genetic studies that support diagnosis and treatment."
+    },
+    {
+        "name": "Study",
+        "type": "Object",
+        "notion": "It contains key genetic information of the patient derived from the analysis of samples, to detect possible rare diseases.",
+        "impact": "The doctor requests the study to be able to analyze the patients' symptoms. The laboratory administrator adds sample collection, whether from blood or another source, to the study. The laboratory administrator adds the study to a sample set to be sent abroad."
+    },
+    {
+        "name": "Request a Study",
+        "type": "Verb",
+        "notion": "Action carried out to detect possible diseases through genetic analysis.",
+        "impact": "The doctor requests the study. The laboratory administrator makes a budget. The patient accepts the quote. The laboratory administrator adds the sample collection to the study. The laboratory administrator adds the study to a sample set to be sent abroad."
+    },
+    {
+        "name": "Sample Abroad",
+        "type": "State",
+        "notion": "The sample has arrived at the laboratory abroad and is ready for examination.",
+        "impact": "The specialized foreign laboratory analyzes the sample and returns the results so that the patient can carry out the corresponding treatment."
+    }
+]

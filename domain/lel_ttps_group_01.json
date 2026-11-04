@@ -1,0 +1,194 @@
+[
+    {
+        "name": "Patient",
+        "type": "Subject",
+        "notion": "The patient is the user who will undergo medical studies. You are the main beneficiary of the system, since you will be able to view relevant information about your studies, shifts and budgets, in addition to managing requests related to these.",
+        "impact": "The patient will be able to view the list of registered studies associated with their profile. The patient will be able to view specific details of a study, including the current status and any available results. The patient will be able to view specific details of a study, including the current status and any available results. The patient may request appointments to carry out pending studies. The patient will be able to access the estimated or final budget for their studies. The patient will be able to consult the list of appointments associated with their studies, with dates and times. The patient will be able to view the budgets for their studies, organized by costs and additional details. The patient will be able to view the final results of studies."
+    },
+    {
+        "name": "Laboratory Administrator",
+        "type": "Subject",
+        "notion": "User whose role manages and administers the samples/studies obtained from the different laboratories User whose role manages and administers the information regarding the Sampleset.",
+        "impact": "The laboratory admin generates the payment budget for a study for subsequent analysis The laboratory admin validates the payment for a study The laboratory administrator records state changes in the life cycle of samples/studies The laboratory admin obtains information on genetic variables from the API corresponding to the pathology sent as a variable The laboratory admin manages the results of the studies obtained from the laboratory The laboratory admin generates the assembly of the sample set The Laboratory admin manages the permit before the Ministry of Health for the export of samples abroad. The admin The laboratory receives notifications/results from the external laboratory with the exome results of the samples sent. The laboratory admin records the final results of all the samples carried out in the external laboratory."
+    },
+    {
+        "name": "Referring Physician",
+        "type": "Subject",
+        "notion": "It is a doctor who will give instructions for studies to be carried out on patients. It will also be the doctor who will receive the final results of the workflow.",
+        "impact": "The doctor will receive a consultation from a patient The doctor will register the patient The doctor will register a study for the patient The doctor assigns a laboratory admin to monitor the study The doctor will view a list of his patient studies The doctor will view the status history of his studies The doctor will inform the patient of the final result."
+    },
+    {
+        "name": "Transporter",
+        "type": "Subject",
+        "notion": "User whose role is in charge of collecting the samples/studies/orders obtained from the different laboratories. Will carry out the subsequent delivery of the samples/studies/orders to the central laboratory.",
+        "impact": "The transporter will receive a list of orders/samples/studies for the day. The transporter will pick up an order/sample/study. The transporter will mark an attempted visit to the laboratory that could not attend to it. At the end of the journey, the carrier will proceed to deliver the orders/samples/studies to the central laboratory and will change their status. The carrier will receive a map with the day's route."
+    },
+    {
+        "name": "Pathology",
+        "type": "Object",
+        "notion": "A pathology represents a diagnosed disease, which is associated with the studies carried out by a patient for its identification, monitoring or treatment.",
+        "impact": "Doctors record the pathology associated with a study. Patients view the diagnosed pathologies related to their studies. The reports generated include information on the pathologies detected."
+    },
+    {
+        "name": "Report",
+        "type": "Object",
+        "notion": "Document generated as a result of a medical study that contains the interpretation, conclusions and details related to the data obtained during the study.",
+        "impact": "The laboratory generates the report with the results of the study. The doctor views the report to analyze the results. The patient accesses the report through their profile."
+    },
+    {
+        "name": "Exome report",
+        "type": "Object",
+        "notion": "Specific type of report generated after performing an exome analysis (coding part of the genome), used to identify genetic variations associated with diseases or genetic predispositions.",
+        "impact": "The laboratory processes the data from the exomic study and generates the report. The doctor receives and analyzes the report to guide the patient about genetic diagnoses or treatments. The patient can view the exome report in their profile or receive it directly from the doctor."
+    },
+    {
+        "name": "Collection Appointment",
+        "type": "Object",
+        "notion": "choosing a shift with the laboratory, to carry out the extraction for the study.",
+        "impact": "The patient takes a turn. The laboratory assigns a shift. The laboratory cancels a shift."
+    },
+    {
+        "name": "Study",
+        "type": "Object",
+        "notion": "Set of medical practices that the patient must perform in the laboratory.",
+        "impact": "The employee creates a study The employee views studies The employee edits studies The employee changes status to a study The employee uploads documentation for a study The employee associates a study with a batch The Referring Physician uploads a report for the study The study is delivered to the referring physician and patient."
+    },
+    {
+        "name": "Order",
+        "type": "Object",
+        "notion": "Request from each laboratory to the transporter to collect it.",
+        "impact": "The transporter views the list of laboratory orders The transporter views the order route on a map."
+    },
+    {
+        "name": "Collected Orders",
+        "type": "Object",
+        "notion": "Set of orders that the carrier must deliver to the central laboratory.",
+        "impact": "The carrier views the list of orders that he picked up that day."
+    },
+    {
+        "name": "Family history",
+        "type": "Object",
+        "notion": "The patient informs that there is a history of a disease in his family and resorts to carrying out the study for prevention.",
+        "impact": "The doctor uploads the pathology that the patient provides in the “Family History” field. The doctor discharges the study for the uploaded pathology. The doctor puts the study in “Generation” status. The study is pending generation of the budget by the laboratory administrator. The patient can view the status of their study."
+    },
+    {
+        "name": "Register Patient",
+        "type": "Verb",
+        "notion": "Process by which an employee registers a patient in the system.",
+        "impact": "The patient enters personal data The employee registers the personal data of a patient in a form The system registers the patient in the system The patient is assigned to a study to be performed The patient is assigned to a doctor the patient is assigned to a laboratory administrator for monitoring in the study The patient is registered in the system and can view their studies and status."
+    },
+    {
+        "name": "Collect Laboratory Order",
+        "type": "Verb",
+        "notion": "Process by which the carrier picks up an order from a laboratory.",
+        "impact": "The transporter views the list of laboratory orders The transporter views the route of the laboratories' orders on a map The transporter marks an order on the list as picked."
+    },
+    {
+        "name": "Visit Laboratory",
+        "type": "Verb",
+        "notion": "Process by which the carrier attempts to pick up an order and is prevented for some reason.",
+        "impact": "The carrier marks an order on the list as a visit attempt."
+    },
+    {
+        "name": "Deliver Orders to Central Laboratory",
+        "type": "Verb",
+        "notion": "Process by which the carrier delivers the set of orders collected to the central laboratory.",
+        "impact": "The transporter views the list of orders collected from the laboratories The transporter delivers the collected orders and marks them as delivered to the central laboratory At the same time the status of the studies changes."
+    },
+    {
+        "name": "Informed Consent Pending Submission",
+        "type": "State",
+        "notion": "The study is waiting for informed consent to be sent to the patient.",
+        "impact": "When an employee sends informed consent to a patient, the study moves to “Awaiting signed consent”"
+    },
+    {
+        "name": "Order Collected",
+        "type": "State",
+        "notion": "The order is in the possession of the carrier for subsequent delivery.",
+        "impact": "When the carrier picks up an order, it becomes “Collected”"
+    },
+    {
+        "name": "Failed Collection Visit",
+        "type": "State",
+        "notion": "The carrier is in a specific laboratory and cannot pick up the order.",
+        "impact": "When the carrier visits a laboratory and cannot pick up the order, it becomes “Visit Attempt”"
+    },
+    {
+        "name": "Orders Delivered to Central Laboratory",
+        "type": "State",
+        "notion": "Orders picked up by the carrier are directed for delivery to the central laboratory.",
+        "impact": "When the carrier delivers the collected orders, they become “Delivered to Central” and the order studies go to “Export” Laboratory Manager."
+    },
+    {
+        "name": "Study Created",
+        "type": "State",
+        "notion": "The study was created by the doctor with information and initial diagnosis of the patient. The study is awaiting creation of a budget.",
+        "impact": "When a doctor creates a new study to perform on a patient, an initial status is assigned to the study called \"Study creation.\""
+    },
+    {
+        "name": "Study Budgeted",
+        "type": "State",
+        "notion": "The budget was created by the laboratory administrator. The study is awaiting the corresponding payment from the patient.",
+        "impact": "When the laboratory administrator makes the corresponding budget based on the study and genetic variants to be carried out, the study is assigned a new status called \"Settlement Status\""
+    },
+    {
+        "name": "Study Awaiting Collection",
+        "type": "State",
+        "notion": "The budget was satisfactorily paid by the patient. The study is waiting for the patient to undergo the corresponding extraction analysis.",
+        "impact": "When the laboratory administrator receives the payment notification for the study, the study goes to \"Extraction Study\" status, enabling the patient to request an appointment at an external laboratory."
+    },
+    {
+        "name": "Study Awaiting Central Transfer",
+        "type": "State",
+        "notion": "The study is ready for transfer from an external laboratory to the central sample collection laboratory.",
+        "impact": "When the laboratory administrator receives notification from the external laboratory that the sample can be removed from the establishment, the study changes status to \"Distribution Study\", enabling the transporter to distribute it to the central laboratory."
+    },
+    {
+        "name": "Study Awaiting Export",
+        "type": "State",
+        "notion": "The study is in the central laboratory awaiting transfer to the external laboratory (Korea) for sequencing.",
+        "impact": "When the carrier dispatches the samples to the central laboratory, the study defines a new status called \"Export Study.\""
+    },
+    {
+        "name": "Study in Sequencing",
+        "type": "State",
+        "notion": "The study, formed within a sample set, is ready for shipment abroad and sequencing.",
+        "impact": "When the laboratory administrator receives notification from the Ministry of Health for the export of samples, the study changes to the new status \"Sequencing Study\""
+    },
+    {
+        "name": "Study Completed",
+        "type": "State",
+        "notion": "It represents the final stage of the study, when the results of the genomic evaluation from the outside laboratory are recorded.",
+        "impact": "When the laboratory manager receives the result from the outside laboratory for a given sample, the laboratory manager records the corresponding result The study changes to a new state \"Study Completion\""
+    },
+    {
+        "name": "Sample Set in Progress",
+        "type": "State",
+        "notion": "Represents the current state of the sampleset from its creation to its completion of loading with 100 samples to export.",
+        "impact": "When a new sampleset is created for sample export, it receives an initial status of \"In Process\""
+    },
+    {
+        "name": "Sample Set in Sequencing",
+        "type": "State",
+        "notion": "Represents the state of the sampleset when the samples are enabled to be sent abroad and genetic analysis.",
+        "impact": "When the laboratory administrator receives satisfactory notification from the ministry of health for sample export, the sampleset is assigned a new status \"Sampleset Sequencing\""
+    },
+    {
+        "name": "Sample Set Completed",
+        "type": "State",
+        "notion": "Represents the state of the sampleset, when all the results corresponding to the samples that made up that sampleset were received.",
+        "impact": "When the lab manager receives/records the latest result for a sample of a given sampleset, the sampleset receives a new status called \"Sampleset Completed.\""
+    },
+    {
+        "name": "Paid Budget",
+        "type": "State",
+        "notion": "Represents the status of the budget, when the allocated amount was \"paid\" by the patient.",
+        "impact": "When the laboratory administrator receives notification that a specific patient made the corresponding payment, the budget receives a new status called \"Budget Payment\""
+    },
+    {
+        "name": "Unpaid Budget",
+        "type": "State",
+        "notion": "Represents the initial state of the budget, when the laboratory administrator generates a new budget for a given study.",
+        "impact": "When the lab administrator creates a new budget and defines an amount to be paid, the budget is assigned an initial status \"Unpaid Budget\""
+    }
+]

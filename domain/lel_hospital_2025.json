@@ -1,0 +1,314 @@
+[
+  {
+    "name": "Physician",
+    "type": "Subject",
+    "notion": "A licensed medical healthcare professional authorized and responsible for diagnosing illnesses, managing clinical therapies, and caring for hospital patients.",
+    "impact": "The physician assesses patient symptoms, orders clinical diagnostic tests, prescribes pharmaceutical treatments, and records diagnoses in medical records."
+  },
+  {
+    "name": "Doctor",
+    "type": "Subject",
+    "notion": "A qualified healthcare practitioner operating in the hospital environment who examines patients and administers clinical interventions.",
+    "impact": "The doctor examines arriving patients, reviews laboratory results, determines therapy protocols, and updates clinical histories."
+  },
+  {
+    "name": "Medical Specialist",
+    "type": "Subject",
+    "notion": "A senior medical physician focused on a specific clinical branch responsible for specialized consultations and complex interventions.",
+    "impact": "The medical specialist conducts advanced diagnostic examinations, interprets complex imaging data, and supervises specialized therapies."
+  },
+  {
+    "name": "Specialist Doctor",
+    "type": "Subject",
+    "notion": "A physician holding certified postgraduate specialization who handles focused clinical pathology and therapeutic decisions.",
+    "impact": "The specialist doctor advises general clinicians, conducts targeted diagnostic procedures, and oversees specialized patient recovery."
+  },
+  {
+    "name": "Hospital Staff",
+    "type": "Subject",
+    "notion": "The administrative, clinical, and logistical personnel employed by the medical center to sustain institutional healthcare operations.",
+    "impact": "Hospital staff assist clinicians, coordinate appointment scheduling, manage facility hygiene, and facilitate patient admissions."
+  },
+  {
+    "name": "Nurse",
+    "type": "Subject",
+    "notion": "A registered healthcare professional responsible for direct continuous bedside patient care, medication delivery, and vital sign monitoring.",
+    "impact": "The nurse measures patient vitals, administers prescribed medication dosages, aids physicians during procedures, and reports clinical changes."
+  },
+  {
+    "name": "Triage Nurse",
+    "type": "Subject",
+    "notion": "A specialized emergency nurse stationed at patient intake to assess medical urgency and assign care prioritization tiers.",
+    "impact": "The triage nurse evaluates incoming patient severity, takes initial vitals, and directs urgent cases into acute care rooms."
+  },
+  {
+    "name": "Emergency Triage Nurse",
+    "type": "Subject",
+    "notion": "An emergency department nurse tasked with immediate clinical intake assessment and urgency categorization of acute arrivals.",
+    "impact": "The emergency triage nurse classifies patient distress levels and coordinates immediate bed assignment with emergency physicians."
+  },
+  {
+    "name": "Pharmacist",
+    "type": "Subject",
+    "notion": "A licensed health professional specializing in pharmaceutical science, drug safety verification, and therapeutic dispensing.",
+    "impact": "The pharmacist reviews physician prescriptions, verifies drug compatibility and dosage, dispenses medication, and advises clinical teams."
+  },
+  {
+    "name": "Hospital Administrator",
+    "type": "Subject",
+    "notion": "An executive manager directing hospital resource allocation, departmental compliance, staffing policies, and clinical facility standards.",
+    "impact": "The hospital administrator approves departmental budgets, oversees regulatory compliance, and coordinates hospital operations."
+  },
+  {
+    "name": "Clinical Director",
+    "type": "Subject",
+    "notion": "A senior medical officer responsible for governing clinical protocols, physician governance, and healthcare service quality throughout the hospital.",
+    "impact": "The clinical director enforces institutional medical standards, supervises department heads, and audits healthcare delivery."
+  },
+  {
+    "name": "Patient",
+    "type": "Subject",
+    "notion": "An individual receiving medical examination, diagnostic testing, nursing care, or surgical treatment within the healthcare system.",
+    "impact": "The patient provides symptom details, presents medical documentation, agrees to treatment plans, and attends follow-up consultations."
+  },
+  {
+    "name": "Hospital User",
+    "type": "Subject",
+    "notion": "An individual registered in the institutional hospital database accessing healthcare consultations and clinical services.",
+    "impact": "The hospital user requests medical appointments, accesses diagnostic lab outcomes through the portal, and adheres to doctor guidance."
+  },
+  {
+    "name": "Pediatric Patient",
+    "type": "Subject",
+    "notion": "An infant, child, or adolescent receiving specialized developmental and medical healthcare from pediatric practitioners.",
+    "impact": "The pediatric patient receives childhood medical attention while accompanied by legal guardians during consultations and therapies."
+  },
+  {
+    "name": "Child Patient",
+    "type": "Subject",
+    "notion": "A minor receiving medical examination, preventive vaccination, or acute pediatric treatment within the hospital children wing.",
+    "impact": "The child patient undergoes clinical checks under parental supervision and follows tailored pediatric therapy plans."
+  },
+  {
+    "name": "Medical Record",
+    "type": "Object",
+    "notion": "A formal confidential repository consolidating the complete medical history, diagnostic reports, and ongoing treatment notes of a patient.",
+    "impact": "Physicians update the medical record during visits. Medical specialists review the record prior to surgery. Archival clerks store inactive files."
+  },
+  {
+    "name": "Clinical History",
+    "type": "Object",
+    "notion": "A longitudinal health dossier recording previous illnesses, surgical interventions, family pathologies, and chronic treatment responses.",
+    "impact": "The doctor examines the clinical history to prevent medication errors and documents current disease progression."
+  },
+  {
+    "name": "Electronic Health Record",
+    "type": "Object",
+    "notion": "A digitized secure institutional database system containing real-time patient clinical records, prescriptions, and diagnostic lab data.",
+    "impact": "Clinical staff query the electronic health record to retrieve patient health summaries and log clinical observations instantly."
+  },
+  {
+    "name": "EHR",
+    "type": "Object",
+    "notion": "The common industry initialism for Electronic Health Record, denoting the digital software platform maintaining patient medical information.",
+    "impact": "Physicians access the EHR at hospital workstations to review laboratory reports and place diagnostic orders."
+  },
+  {
+    "name": "Emergency Room",
+    "type": "Object",
+    "notion": "A specialized acute care hospital facility designed for immediate diagnostic assessment and stabilization of critical injuries or sudden trauma.",
+    "impact": "Ambulances transport acute patients to the emergency room. Emergency physicians stabilize traumatic conditions around the clock."
+  },
+  {
+    "name": "ER",
+    "type": "Object",
+    "notion": "The standard abbreviation for Emergency Room, denoting the urgent hospital department handling acute medical situations.",
+    "impact": "Triage nurses transfer urgent patients to the ER. Clinical specialists answer priority consultation calls in the ER."
+  },
+  {
+    "name": "Emergency Department",
+    "type": "Object",
+    "notion": "The comprehensive hospital division responsible for emergency triage, urgent stabilization, and resuscitation of critical patients.",
+    "impact": "The emergency department coordinates emergency intake, deploys trauma teams, and transfers stabilized patients to intensive units."
+  },
+  {
+    "name": "Accident and Emergency Ward",
+    "type": "Object",
+    "notion": "The hospital ward dedicated to accepting and treating acute trauma victims, vehicular accident casualties, and emergency health crises.",
+    "impact": "Trauma surgical staff operate in the accident and emergency ward to perform urgent lifesaving interventions."
+  },
+  {
+    "name": "Intensive Care Unit",
+    "type": "Object",
+    "notion": "A high-dependency hospital department equipped with advanced life-support systems providing round-the-clock intensive care for critical patients.",
+    "impact": "Intensivists manage complex mechanical ventilation and continuous hemodynamic monitoring for patients admitted to the intensive care unit."
+  },
+  {
+    "name": "ICU",
+    "type": "Object",
+    "notion": "The universal medical acronym for Intensive Care Unit, designating the continuous critical care and life support ward.",
+    "impact": "Specialists monitor critical vital indicators in the ICU and titrate emergency intravenous infusions."
+  },
+  {
+    "name": "Operating Room",
+    "type": "Object",
+    "notion": "A sterile surgical theatre equipped with specialized operative instruments, surgical lights, and anesthesia monitoring stations.",
+    "impact": "Surgeons and surgical nurses perform invasive operative procedures in the operating room under rigorous asepsis."
+  },
+  {
+    "name": "Surgery Theatre",
+    "type": "Object",
+    "notion": "A specialized surgical suite within the hospital where surgical specialists carry out scheduled and emergency operative interventions.",
+    "impact": "The surgical team sterilizes equipment in the surgery theatre and executes invasive operations on anesthetized patients."
+  },
+  {
+    "name": "Prescription",
+    "type": "Object",
+    "notion": "An official medical directive authored by an authorized physician specifying drug names, dosage amounts, and administration routes.",
+    "impact": "The physician generates the prescription for the patient. The pharmacist dispenses medication following prescription instructions."
+  },
+  {
+    "name": "Medication Order",
+    "type": "Object",
+    "notion": "A formal clinical order entered into the hospital pharmacy system authorizing the preparation and administration of therapeutic pharmaceuticals.",
+    "impact": "The doctor signs the medication order. Hospital pharmacy staff dispense the ordered drugs to the designated nursing ward."
+  },
+  {
+    "name": "Medication",
+    "type": "Object",
+    "notion": "A pharmaceutical chemical substance formulated to treat medical conditions, alleviate physiological distress, or cure diseases.",
+    "impact": "The pharmacist validates medication purity and compatibility. Nurses administer medication to inpatients according to schedule."
+  },
+  {
+    "name": "Pharmaceutical Drug",
+    "type": "Object",
+    "notion": "A clinically approved medicinal compound manufactured for therapeutic disease management and pharmacological treatment.",
+    "impact": "Physicians prescribe pharmaceutical drugs to manage acute and chronic pathologies in hospitalized patients."
+  },
+  {
+    "name": "Surgical Procedure",
+    "type": "Object",
+    "notion": "An operative medical intervention performed on a patient to repair organ damage, excise diseased tissue, or correct physical trauma.",
+    "impact": "The surgeon executes the surgical procedure in the operating theatre. Anesthesiologists manage patient stability during the procedure."
+  },
+  {
+    "name": "Surgical Operation",
+    "type": "Object",
+    "notion": "An invasive clinical intervention carried out by surgical specialists to treat injuries or bodily ailments under surgical anesthesia.",
+    "impact": "Surgical teams prepare instruments for the surgical operation and transfer the patient to recovery care upon conclusion."
+  },
+  {
+    "name": "Computed Tomography",
+    "type": "Object",
+    "notion": "A non-invasive diagnostic medical imaging technology using cross-sectional X-rays to visualize internal organ and tissue anatomy.",
+    "impact": "Radiology technicians perform computed tomography scans to detect internal fractures, vascular anomalies, and tumors."
+  },
+  {
+    "name": "CT",
+    "type": "Object",
+    "notion": "The common medical initialism for Computed Tomography, designating cross-sectional diagnostic radiological scanning.",
+    "impact": "Physicians review CT image slices to confirm acute trauma diagnoses and plan surgical interventions."
+  },
+  {
+    "name": "Vital Signs Monitor",
+    "type": "Object",
+    "notion": "An electronic bedside clinical device continuously displaying patient heart rate, blood pressure, oxygen saturation, and temperature.",
+    "impact": "Nurses attach leads from the vital signs monitor to inpatients. The monitor alerts clinical staff if vital signs fluctuate abnormally."
+  },
+  {
+    "name": "Patient Monitor",
+    "type": "Object",
+    "notion": "A bedside digital medical instrument that tracks and records ongoing physiological parameters of hospitalized individuals.",
+    "impact": "The patient monitor triggers visual alarms when cardiac rhythms or pulse oxygen levels breach safe clinical boundaries."
+  },
+  {
+    "name": "Health Insurance",
+    "type": "Object",
+    "notion": "A contractual healthcare policy providing financial coverage and reimbursement for hospital services, procedures, and medications.",
+    "impact": "Administrative admission staff verify health insurance validity to authorize hospital coverage for scheduled inpatient treatments."
+  },
+  {
+    "name": "Medical Coverage",
+    "type": "Object",
+    "notion": "The scope of clinical benefits and healthcare financial compensation provided by an insurance provider to offset medical costs.",
+    "impact": "Hospital billing clerks process claims against patient medical coverage to settle treatment costs."
+  },
+  {
+    "name": "Diagnose",
+    "type": "Verb",
+    "notion": "The medical cognitive and observational process of identifying the pathology or condition underlying patient clinical symptoms.",
+    "impact": "Step 1: The physician conducts an examination and takes patient history. Step 2: The doctor analyzes diagnostic test findings. Step 3: The physician documents the diagnostic conclusion."
+  },
+  {
+    "name": "Evaluate Pathology",
+    "type": "Verb",
+    "notion": "The comprehensive clinical assessment of symptoms, biopsy samples, and lab markers to determine the disease affecting a patient.",
+    "impact": "Step 1: The clinical specialist reviews clinical symptoms. Step 2: The specialist evaluates laboratory markers. Step 3: The specialist records the confirmed pathological diagnosis."
+  },
+  {
+    "name": "Admit Patient",
+    "type": "Verb",
+    "notion": "The institutional process of formally receiving a patient into hospital custody and allocating them to an inpatient bed.",
+    "impact": "Step 1: Staff confirm personal identity and medical necessity. Step 2: Nurses complete triage intake documentation. Step 3: The physician assigns the patient to an active ward bed."
+  },
+  {
+    "name": "Hospitalize Patient",
+    "type": "Verb",
+    "notion": "The medical action of placing an individual under continuous inpatient medical care within a hospital ward.",
+    "impact": "Step 1: The clinician determines the requirement for continuous care. Step 2: Administrative clerks execute admission paperwork. Step 3: Nursing staff settle the patient into an inpatient room."
+  },
+  {
+    "name": "Discharge Patient",
+    "type": "Verb",
+    "notion": "The official medical and administrative release of a patient after achieving recovery and clinical stability.",
+    "impact": "Step 1: The physician certifies clinical recovery. Step 2: The nurse explains home care guidelines. Step 3: Staff finalize administrative paperwork and release the patient."
+  },
+  {
+    "name": "Release Patient",
+    "type": "Verb",
+    "notion": "The formal authorization permitting a stabilized inpatient to depart the healthcare facility following completed therapy.",
+    "impact": "Step 1: The doctor signs the discharge release order. Step 2: The clinical team provides outpatient medication instructions. Step 3: Administrative staff close the active stay file."
+  },
+  {
+    "name": "Under Treatment",
+    "type": "State",
+    "notion": "The clinical condition of a patient actively undergoing medication regimens, supervised procedures, or recovery therapies.",
+    "impact": "From this state, if recovery milestones are achieved, the doctor transitions the patient to Discharged. If symptoms persist, therapy is adjusted."
+  },
+  {
+    "name": "In Active Therapy",
+    "type": "State",
+    "notion": "The status of an admitted patient receiving continuous supervised clinical therapies and medical interventions.",
+    "impact": "From this state, clinical teams monitor daily therapeutic response until the patient reaches health stabilization."
+  },
+  {
+    "name": "Critical",
+    "type": "State",
+    "notion": "The hazardous clinical state of a patient with life-threatening vital instability requiring intensive mechanical life support.",
+    "impact": "From this state, intensive care teams administer continuous resuscitation until the patient stabilizes or undergoes urgent surgery."
+  },
+  {
+    "name": "Stable",
+    "type": "State",
+    "notion": "The reassuring clinical condition where patient physiological vitals remain steady within acceptable safe ranges.",
+    "impact": "From this state, the patient is considered for transfer from high-dependency units to a regular recovery ward."
+  },
+  {
+    "name": "Discharged",
+    "type": "State",
+    "notion": "The completed status of a patient who has concluded required clinical care and has been officially authorized to return home.",
+    "impact": "From this state, active hospital monitoring ceases, inpatient billing is concluded, and records transition to institutional archives."
+  },
+  {
+    "name": "Medically Discharged",
+    "type": "State",
+    "notion": "The formal clinical status signifying that physician-mandated inpatient treatments are concluded and the patient is authorized for departure.",
+    "impact": "From this state, outpatient follow-up appointments are scheduled and hospital stay records are closed."
+  },
+  {
+    "name": "Surgical Nurse",
+    "type": "Subject",
+    "notion": "A specialized perioperative nurse who prepares the sterile operating theatre, sterilizes surgical instruments, and assists surgeons directly during operative procedures.",
+    "impact": "The surgical nurse maintains operating room sterility, passes surgical instruments to the surgeon, monitors sterile fields, and assists in surgical wound dressings."
+  }
+]
