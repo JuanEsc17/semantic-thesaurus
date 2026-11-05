@@ -860,5 +860,8 @@ out_html = "thesaurus_visualizer.html"
 with open(out_html, "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print(f"Interactive visualizer generated: {out_html} ({os.path.getsize(out_html)} bytes)")
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"Interactive visualizer generated: {out_html} and index.html ({os.path.getsize(out_html)} bytes)")
 
