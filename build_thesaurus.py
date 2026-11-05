@@ -312,6 +312,7 @@ def build_all_thesauri():
         ("military", "Military Academy Discipline (2025)", "domain/lel_military_2025.json"),
         ("genetic_lab", "Genetic Laboratory - Consolidated (2024)", "domain/lel_genetic_lab_2024.json"),
         ("ttps_g01", "Genetic Lab - TTPS Group 01", "domain/lel_ttps_group_01.json"),
+        ("ttps_g01_2026", "Genetic Lab - TTPS Group 1 (2026)", "domain/lel_ttps_group_1_2026.json"),
         ("ttps_g02", "Genetic Lab - TTPS Group 02", "domain/lel_ttps_group_02.json"),
         ("ttps_g03", "Genetic Lab - TTPS Group 03", "domain/lel_ttps_group_03.json"),
         ("ttps_g04", "Genetic Lab - TTPS Group 04", "domain/lel_ttps_group_04.json"),
